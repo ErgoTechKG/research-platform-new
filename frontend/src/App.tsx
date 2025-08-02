@@ -67,6 +67,7 @@ import DataAnalysisCenter from './pages/DataAnalysisCenter'
 import ResourceSharingCenter from './pages/ResourceSharingCenter'
 import AIHomeworkDetection from './pages/AIHomeworkDetection'
 import AIScoringAssistant from './pages/AIScoringAssistant'
+import AutomatedDataCollection from './pages/AutomatedDataCollection'
 import StudentDashboard from './pages/StudentDashboard'
 import ProfessorDashboard from './pages/ProfessorDashboard'
 import SecretaryDashboard from './pages/SecretaryDashboard'
@@ -146,6 +147,7 @@ function App() {
         <Route path="/resource-sharing-center" element={<ResourceSharingCenter />} />
         <Route path="/ai-homework-detection" element={<AIHomeworkDetection />} />
         <Route path="/ai-scoring-assistant" element={<AIScoringAssistant />} />
+        <Route path="/automated-data-collection" element={<AutomatedDataCollection />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/professor-dashboard" element={<ProfessorDashboard />} />
         <Route path="/secretary-dashboard" element={<SecretaryDashboard />} />

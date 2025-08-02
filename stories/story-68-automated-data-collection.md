@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: FINISHED
 priority: medium
 complexity: high
 dependencies: [story-58-data-analysis-center, story-37-realtime-statistics-panel]
