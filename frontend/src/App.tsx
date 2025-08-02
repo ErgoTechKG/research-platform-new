@@ -57,6 +57,7 @@ import BatchImportTool from './pages/BatchImportTool'
 import BatchOperationsManagement from './pages/BatchOperationsManagement'
 import AutomaticReportGenerator from './pages/AutomaticReportGenerator'
 import AITeachingAssistant from './pages/AITeachingAssistant'
+import SocialLearningNetwork from './pages/SocialLearningNetwork'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -122,6 +123,7 @@ function App() {
         <Route path="/batch-operations" element={<BatchOperationsManagement />} />
         <Route path="/automatic-report-generator" element={<AutomaticReportGenerator />} />
         <Route path="/ai-teaching-assistant" element={<AITeachingAssistant />} />
+        <Route path="/social-learning-network" element={<SocialLearningNetwork />} />
       </Routes>
       <TestModeIndicator />
     </div>
