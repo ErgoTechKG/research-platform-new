@@ -21,6 +21,7 @@ import DefenseScheduling from './pages/DefenseScheduling'
 import OnlineDefensePlatform from './pages/OnlineDefensePlatform'
 import AchievementShowcase from './pages/AchievementShowcase'
 import MultidimensionalScoringForm from './pages/MultidimensionalScoringForm'
+import ScoringStandardConfig from './pages/ScoringStandardConfig'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
         <Route path="/online-defense" element={<OnlineDefensePlatform />} />
         <Route path="/achievement-showcase" element={<AchievementShowcase />} />
         <Route path="/multidimensional-scoring" element={<MultidimensionalScoringForm />} />
+        <Route path="/scoring-standard-config" element={<ScoringStandardConfig />} />
       </Routes>
       <TestModeIndicator />
     </div>
