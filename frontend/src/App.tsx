@@ -62,6 +62,7 @@ import DataAnalysisCenter from './pages/DataAnalysisCenter'
 import ResourceSharingCenter from './pages/ResourceSharingCenter'
 import StudentDashboard from './pages/StudentDashboard'
 import ProfessorDashboard from './pages/ProfessorDashboard'
+import SecretaryDashboard from './pages/SecretaryDashboard'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -132,6 +133,7 @@ function App() {
         <Route path="/resource-sharing-center" element={<ResourceSharingCenter />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/professor-dashboard" element={<ProfessorDashboard />} />
+        <Route path="/secretary-dashboard" element={<SecretaryDashboard />} />
       </Routes>
       <TestModeIndicator />
     </div>
