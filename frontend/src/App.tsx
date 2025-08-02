@@ -13,6 +13,7 @@ import AdjustmentManagement from './pages/AdjustmentManagement'
 import TaskPublishing from './pages/TaskPublishing'
 import ProgressTracking from './pages/ProgressTracking'
 import WeeklyMeeting from './pages/WeeklyMeeting'
+import LearningReport from './pages/LearningReport'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/task-publishing" element={<TaskPublishing />} />
         <Route path="/progress-tracking" element={<ProgressTracking />} />
         <Route path="/weekly-meeting" element={<WeeklyMeeting />} />
+        <Route path="/learning-report" element={<LearningReport />} />
       </Routes>
       <TestModeIndicator />
     </div>

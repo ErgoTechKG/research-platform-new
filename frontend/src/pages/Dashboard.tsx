@@ -23,7 +23,7 @@ const Dashboard = () => {
       { icon: KanbanSquare, title: '任务看板', description: '查看和管理学习任务进度', color: 'bg-orange-500', path: '/progress-tracking' },
       { icon: MessageSquare, title: '师生互动', description: '与导师进行在线讨论', color: 'bg-cyan-500', path: '/weekly-meeting' },
       { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
-      { icon: FileText, title: '学习报告', description: '提交和查看学习报告', color: 'bg-yellow-500' },
+      { icon: FileText, title: '学习报告', description: '提交和查看学习报告', color: 'bg-yellow-500', path: '/learning-report' },
       { icon: BarChart, title: '成绩查询', description: '查看各科成绩和排名', color: 'bg-purple-500' }
     ],
     faculty: [
