@@ -39,6 +39,7 @@ import GradeImportSystem from './pages/GradeImportSystem'
 import ExpertReviewPlatform from './pages/ExpertReviewPlatform'
 import ScoringCalibrationTool from './pages/ScoringCalibrationTool'
 import RealtimeStatisticsPanel from './pages/RealtimeStatisticsPanel'
+import MoralCharacterEvaluationInterface from './pages/MoralCharacterEvaluationInterface'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
         <Route path="/expert-review-platform" element={<ExpertReviewPlatform />} />
         <Route path="/scoring-calibration-tool" element={<ScoringCalibrationTool />} />
         <Route path="/realtime-statistics-panel" element={<RealtimeStatisticsPanel />} />
+        <Route path="/moral-character-evaluation" element={<MoralCharacterEvaluationInterface />} />
       </Routes>
       <TestModeIndicator />
     </div>
