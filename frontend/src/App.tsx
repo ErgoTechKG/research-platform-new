@@ -18,6 +18,7 @@ import InstantMessaging from './pages/InstantMessaging'
 import PosterDesigner from './pages/PosterDesigner'
 import ResearchReport from './pages/ResearchReport'
 import DefenseScheduling from './pages/DefenseScheduling'
+import OnlineDefensePlatform from './pages/OnlineDefensePlatform'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/poster-designer" element={<PosterDesigner />} />
         <Route path="/research-report" element={<ResearchReport />} />
         <Route path="/defense-scheduling" element={<DefenseScheduling />} />
+        <Route path="/online-defense" element={<OnlineDefensePlatform />} />
       </Routes>
       <TestModeIndicator />
     </div>

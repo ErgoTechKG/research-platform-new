@@ -86,7 +86,7 @@ export default function DefenseScheduling() {
   };
   
   const handleJoinOnline = () => {
-    window.open(myDefenseInfo.onlineRoom, '_blank');
+    navigate('/online-defense?id=defense-123');
   };
   
   const handleDownloadGuide = () => {
@@ -289,7 +289,7 @@ END:VCALENDAR`;
               </Button>
               <Button onClick={() => {
                 setShowMockDefense(false);
-                alert('模拟答辩功能即将开启...');
+                navigate('/online-defense?id=mock-defense');
               }}>
                 开始模拟
               </Button>
