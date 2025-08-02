@@ -22,6 +22,7 @@ import OnlineDefensePlatform from './pages/OnlineDefensePlatform'
 import AchievementShowcase from './pages/AchievementShowcase'
 import MultidimensionalScoringForm from './pages/MultidimensionalScoringForm'
 import ScoringStandardConfig from './pages/ScoringStandardConfig'
+import BatchScoringInterface from './pages/BatchScoringInterface'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/achievement-showcase" element={<AchievementShowcase />} />
         <Route path="/multidimensional-scoring" element={<MultidimensionalScoringForm />} />
         <Route path="/scoring-standard-config" element={<ScoringStandardConfig />} />
+        <Route path="/batch-scoring" element={<BatchScoringInterface />} />
       </Routes>
       <TestModeIndicator />
     </div>
