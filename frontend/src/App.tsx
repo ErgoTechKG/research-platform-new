@@ -42,6 +42,7 @@ import RealtimeStatisticsPanel from './pages/RealtimeStatisticsPanel'
 import MoralCharacterEvaluationInterface from './pages/MoralCharacterEvaluationInterface'
 import AutomaticCalculationEngine from './pages/AutomaticCalculationEngine'
 import GradePreview from './pages/GradePreview'
+import AnomalyDetectionSystem from './pages/AnomalyDetectionSystem'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
         <Route path="/moral-character-evaluation" element={<MoralCharacterEvaluationInterface />} />
         <Route path="/automatic-calculation-engine" element={<AutomaticCalculationEngine />} />
         <Route path="/grade-preview" element={<GradePreview />} />
+        <Route path="/anomaly-detection" element={<AnomalyDetectionSystem />} />
       </Routes>
       <TestModeIndicator />
     </div>
