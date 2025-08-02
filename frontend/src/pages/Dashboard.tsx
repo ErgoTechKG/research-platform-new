@@ -26,6 +26,7 @@ const Dashboard = () => {
       { icon: Palette, title: '海报设计', description: '在线设计学术海报', color: 'bg-purple-500', path: '/poster-designer' },
       { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
       { icon: FileText, title: '学习报告', description: '提交和查看学习报告', color: 'bg-yellow-500', path: '/learning-report' },
+      { icon: FileText, title: '大报告提交', description: '使用结构化模板提交研究报告', color: 'bg-pink-500', path: '/research-report' },
       { icon: BarChart, title: '成绩查询', description: '查看各科成绩和排名', color: 'bg-purple-500' }
     ],
     faculty: [
