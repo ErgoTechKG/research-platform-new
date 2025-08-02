@@ -11,6 +11,7 @@ import MentorScreening from './pages/MentorScreening'
 import MatchingVisualization from './pages/MatchingVisualization'
 import AdjustmentManagement from './pages/AdjustmentManagement'
 import TaskPublishing from './pages/TaskPublishing'
+import ProgressTracking from './pages/ProgressTracking'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/matching-visualization" element={<MatchingVisualization />} />
         <Route path="/adjustment-management" element={<AdjustmentManagement />} />
         <Route path="/task-publishing" element={<TaskPublishing />} />
+        <Route path="/progress-tracking" element={<ProgressTracking />} />
       </Routes>
       <TestModeIndicator />
     </div>
