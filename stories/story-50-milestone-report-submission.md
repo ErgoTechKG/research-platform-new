@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: finished
 priority: high
 complexity: medium
 dependencies: [story-9-task-publishing-system]

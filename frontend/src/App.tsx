@@ -50,6 +50,7 @@ import AppealManagement from './pages/AppealManagement'
 import ExperimentalClassScreening from './pages/ExperimentalClassScreening'
 import ArchiveFilingSystem from './pages/ArchiveFilingSystem'
 import ReportGenerator from './pages/ReportGenerator'
+import MilestoneReportSubmission from './pages/MilestoneReportSubmission'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -108,6 +109,7 @@ function App() {
         <Route path="/experimental-class-screening" element={<ExperimentalClassScreening />} />
         <Route path="/archive-filing-system" element={<ArchiveFilingSystem />} />
         <Route path="/report-generator" element={<ReportGenerator />} />
+        <Route path="/milestone-report" element={<MilestoneReportSubmission />} />
       </Routes>
       <TestModeIndicator />
     </div>
