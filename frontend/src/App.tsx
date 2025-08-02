@@ -32,6 +32,7 @@ import TimelinePlanning from './pages/TimelinePlanning'
 import InformationCollectionForm from './pages/InformationCollectionForm'
 import MaterialUploadSystem from './pages/MaterialUploadSystem'
 import OCRRecognitionIntegration from './pages/OCRRecognitionIntegration'
+import PreliminaryReviewWorkbench from './pages/PreliminaryReviewWorkbench'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
         <Route path="/information-collection-form" element={<InformationCollectionForm />} />
         <Route path="/material-upload-system" element={<MaterialUploadSystem />} />
         <Route path="/ocr-recognition-integration" element={<OCRRecognitionIntegration />} />
+        <Route path="/preliminary-review-workbench" element={<PreliminaryReviewWorkbench />} />
       </Routes>
       <TestModeIndicator />
     </div>
