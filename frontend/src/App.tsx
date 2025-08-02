@@ -8,6 +8,7 @@ import SeminarManagement from './pages/SeminarManagement'
 import CourseTimeline from './pages/CourseTimeline'
 import StudentPreference from './pages/StudentPreference'
 import MentorScreening from './pages/MentorScreening'
+import MatchingVisualization from './pages/MatchingVisualization'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/course-timeline" element={<CourseTimeline />} />
         <Route path="/student-preference" element={<StudentPreference />} />
         <Route path="/mentor-screening" element={<MentorScreening />} />
+        <Route path="/matching-visualization" element={<MatchingVisualization />} />
       </Routes>
       <TestModeIndicator />
     </div>
