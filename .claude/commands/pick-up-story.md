@@ -6,4 +6,4 @@ As the **frontend-developer** subagent do the following in yolo mode:
 5. Loop back to 3-4 until it is verified
 6. Update the story file’s metadata to set `status: finished`.
 7. git commit the story and gh push
-8. Repeat steps 1–4 until **no** stories remain in the folder.
+8. Repeat steps 1–7 until **no** stories remain in the folder.

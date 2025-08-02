@@ -12,6 +12,7 @@ import MatchingVisualization from './pages/MatchingVisualization'
 import AdjustmentManagement from './pages/AdjustmentManagement'
 import TaskPublishing from './pages/TaskPublishing'
 import ProgressTracking from './pages/ProgressTracking'
+import WeeklyMeeting from './pages/WeeklyMeeting'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/adjustment-management" element={<AdjustmentManagement />} />
         <Route path="/task-publishing" element={<TaskPublishing />} />
         <Route path="/progress-tracking" element={<ProgressTracking />} />
+        <Route path="/weekly-meeting" element={<WeeklyMeeting />} />
       </Routes>
       <TestModeIndicator />
     </div>
