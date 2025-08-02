@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: FINISHED
 priority: medium
 complexity: medium
 dependencies: [story-19-multidimensional-scoring-form, story-21-batch-scoring-interface, story-66-ai-homework-detection]
