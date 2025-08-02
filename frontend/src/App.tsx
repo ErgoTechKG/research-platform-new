@@ -102,6 +102,7 @@ import StudentDashboard from './pages/StudentDashboard'
 import ProfessorDashboard from './pages/ProfessorDashboard'
 import SecretaryDashboard from './pages/SecretaryDashboard'
 import LeaderDashboard from './pages/LeaderDashboard'
+import ProfessorAvailability from './pages/ProfessorAvailability'
 
 // Demo Pages
 import DesignSystemDemo from './pages/DesignSystemDemo'
@@ -133,6 +134,9 @@ function App() {
         <Route path="/dashboard/professor" element={<ProfessorDashboard />} />
         <Route path="/dashboard/secretary" element={<SecretaryDashboard />} />
         <Route path="/dashboard/leader" element={<LeaderDashboard />} />
+        
+        {/* Professor Availability */}
+        <Route path="/professor-availability" element={<ProfessorAvailability />} />
 
         {/* Lab Rotation Course (实验室轮转课程) */}
         {/* Stage 1: 前期筹备阶段 */}
