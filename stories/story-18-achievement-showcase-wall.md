@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: finished
 priority: low
 complexity: simple
 dependencies: []
