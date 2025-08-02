@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle } from 'lucide-react'
+import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck } from 'lucide-react'
 
 const Dashboard = () => {
   const { user } = useAuth()
@@ -31,6 +31,7 @@ const Dashboard = () => {
     ],
     admin: [
       { icon: Users, title: '用户管理', description: '管理所有用户账号', color: 'bg-blue-500' },
+      { icon: UserCheck, title: '导师管理', description: '管理导师资源信息', color: 'bg-indigo-500', path: '/mentor-management' },
       { icon: Settings, title: '系统设置', description: '配置系统参数', color: 'bg-green-500' },
       { icon: PlusCircle, title: '发布课程', description: '发布实验室轮转课程', color: 'bg-orange-500', path: '/course-publish' },
       { icon: BarChart, title: '全局数据', description: '查看系统运行数据', color: 'bg-yellow-500' },

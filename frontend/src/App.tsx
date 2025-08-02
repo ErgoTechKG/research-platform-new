@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import CoursePublish from './pages/CoursePublish'
+import MentorManagement from './pages/MentorManagement'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/course-publish" element={<CoursePublish />} />
+        <Route path="/mentor-management" element={<MentorManagement />} />
       </Routes>
       <TestModeIndicator />
     </div>
