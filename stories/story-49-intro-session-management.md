@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: finished
 priority: medium
 complexity: medium
 dependencies: [story-2-mentor-resource-management-panel]
