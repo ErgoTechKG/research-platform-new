@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { BookOpen, User, Menu } from 'lucide-react'
+import { BookOpen, User, Menu, LogOut } from 'lucide-react'
+import { useAuth } from '@/contexts/AuthContext'
 
 const Header = () => {
+  const { user, logout } = useAuth()
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,15 +58,29 @@ const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="hidden md:flex">
-              <User className="w-4 h-4 mr-2" />
-              个人中心
-            </Button>
-            <Link to="/login">
-              <Button size="sm">
-                登录
-              </Button>
-            </Link>
+            {user ? (
+              <>
+                <div className="hidden md:flex items-center space-x-3">
+                  <div className="text-sm text-right">
+                    <p className="font-medium">{user.name}</p>
+                    <p className="text-gray-500 text-xs">
+                      {user.role === 'student' ? '学生' : 
+                       user.role === 'faculty' ? '教师' : '管理员'}
+                    </p>
+                  </div>
+                  <Button variant="ghost" size="sm" onClick={logout}>
+                    <LogOut className="w-4 h-4 mr-2" />
+                    退出
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <Link to="/login">
+                <Button size="sm">
+                  登录
+                </Button>
+              </Link>
+            )}
             
             {/* Mobile menu */}
             <Sheet>
@@ -106,15 +122,27 @@ const Header = () => {
                     综合评价
                   </Link>
                   <div className="border-t pt-4 mt-4">
-                    <Button className="w-full mb-2">
-                      <User className="w-4 h-4 mr-2" />
-                      个人中心
-                    </Button>
-                    <Link to="/login" className="block">
-                      <Button variant="outline" className="w-full">
-                        登录
-                      </Button>
-                    </Link>
+                    {user ? (
+                      <>
+                        <div className="px-2 py-3 mb-3 bg-gray-50 rounded-md">
+                          <p className="font-medium">{user.name}</p>
+                          <p className="text-sm text-gray-500">
+                            {user.role === 'student' ? '学生' : 
+                             user.role === 'faculty' ? '教师' : '管理员'}
+                          </p>
+                        </div>
+                        <Button onClick={logout} variant="outline" className="w-full">
+                          <LogOut className="w-4 h-4 mr-2" />
+                          退出登录
+                        </Button>
+                      </>
+                    ) : (
+                      <Link to="/login" className="block">
+                        <Button variant="outline" className="w-full">
+                          登录
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </nav>
               </SheetContent>

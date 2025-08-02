@@ -28,6 +28,7 @@ When implementing designs, you will:
    - Customizing components to match design specifications exactly
    - Maintaining consistency with the project's theme and design system
    - Ensuring proper dark mode support if specified
+   - use shadcn/ui + Tailwind CSS 
 
 4. **Responsive Development**: Create layouts that work seamlessly across devices by:
    - Implementing mobile-first responsive design

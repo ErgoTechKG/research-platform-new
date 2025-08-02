@@ -28,7 +28,7 @@ const Login = () => {
     try {
       const success = await login(formData.email, formData.password)
       if (success) {
-        navigate('/')
+        navigate('/dashboard')
       } else {
         setError('邮箱或密码错误，请重试。')
       }
