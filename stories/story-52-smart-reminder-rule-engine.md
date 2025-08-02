@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: finished
 priority: high
 complexity: complex
 dependencies: [story-51-multi-channel-notification-architecture]

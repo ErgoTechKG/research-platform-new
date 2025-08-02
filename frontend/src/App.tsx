@@ -52,6 +52,7 @@ import ArchiveFilingSystem from './pages/ArchiveFilingSystem'
 import ReportGenerator from './pages/ReportGenerator'
 import MilestoneReportSubmission from './pages/MilestoneReportSubmission'
 import NotificationCenter from './pages/NotificationCenter'
+import SmartReminderRuleEngine from './pages/SmartReminderRuleEngine'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -112,6 +113,7 @@ function App() {
         <Route path="/report-generator" element={<ReportGenerator />} />
         <Route path="/milestone-report" element={<MilestoneReportSubmission />} />
         <Route path="/notification-center" element={<NotificationCenter />} />
+        <Route path="/smart-reminder-rule-engine" element={<SmartReminderRuleEngine />} />
       </Routes>
       <TestModeIndicator />
     </div>
