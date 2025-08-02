@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import CoursePublish from './pages/CoursePublish'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/course-publish" element={<CoursePublish />} />
       </Routes>
       <TestModeIndicator />
     </div>

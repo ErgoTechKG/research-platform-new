@@ -2,11 +2,12 @@ import { useAuth } from '@/contexts/AuthContext'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Navigate } from 'react-router-dom'
-import { BookOpen, Users, BarChart, Settings, FileText, Calendar } from 'lucide-react'
+import { Navigate, useNavigate } from 'react-router-dom'
+import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle } from 'lucide-react'
 
 const Dashboard = () => {
   const { user } = useAuth()
+  const navigate = useNavigate()
   
   // Redirect to login if not authenticated
   if (!user) {
@@ -24,12 +25,14 @@ const Dashboard = () => {
     faculty: [
       { icon: Users, title: '学生管理', description: '查看和管理指导学生', color: 'bg-blue-500' },
       { icon: BookOpen, title: '课程管理', description: '管理教授的课程', color: 'bg-green-500' },
+      { icon: PlusCircle, title: '发布课程', description: '发布实验室轮转课程', color: 'bg-orange-500', path: '/course-publish' },
       { icon: FileText, title: '评价管理', description: '对学生进行评价打分', color: 'bg-yellow-500' },
       { icon: BarChart, title: '数据分析', description: '查看教学数据分析', color: 'bg-purple-500' }
     ],
     admin: [
       { icon: Users, title: '用户管理', description: '管理所有用户账号', color: 'bg-blue-500' },
       { icon: Settings, title: '系统设置', description: '配置系统参数', color: 'bg-green-500' },
+      { icon: PlusCircle, title: '发布课程', description: '发布实验室轮转课程', color: 'bg-orange-500', path: '/course-publish' },
       { icon: BarChart, title: '全局数据', description: '查看系统运行数据', color: 'bg-yellow-500' },
       { icon: FileText, title: '报告生成', description: '生成各类统计报告', color: 'bg-purple-500' }
     ]
@@ -61,7 +64,7 @@ const Dashboard = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => feature.path && navigate(feature.path)}>
                 <CardHeader>
                   <div className="mb-4">
                     <div className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center`}>
