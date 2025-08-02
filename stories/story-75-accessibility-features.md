@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: COMPLETED
 priority: low
 complexity: medium
 dependencies: [story-72-design-system-components, story-73-interaction-patterns]

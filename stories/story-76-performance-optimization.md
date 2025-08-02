@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: COMPLETED
 priority: low
 complexity: high
 dependencies: [story-72-design-system-components, story-74-responsive-mobile-optimization]
