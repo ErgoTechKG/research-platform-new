@@ -37,6 +37,7 @@ import ProgressTrackingPanel from './pages/ProgressTrackingPanel'
 import DimensionalScoringInterface from './pages/DimensionalScoringInterface'
 import GradeImportSystem from './pages/GradeImportSystem'
 import ExpertReviewPlatform from './pages/ExpertReviewPlatform'
+import ScoringCalibrationTool from './pages/ScoringCalibrationTool'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
         <Route path="/dimensional-scoring" element={<DimensionalScoringInterface />} />
         <Route path="/grade-import-system" element={<GradeImportSystem />} />
         <Route path="/expert-review-platform" element={<ExpertReviewPlatform />} />
+        <Route path="/scoring-calibration-tool" element={<ScoringCalibrationTool />} />
       </Routes>
       <TestModeIndicator />
     </div>
