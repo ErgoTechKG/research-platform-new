@@ -38,9 +38,9 @@ export function usePerformance() {
   // Measure Core Web Vitals
   const measureCoreWebVitals = useCallback(() => {
     // First Contentful Paint
-    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0] as PerformanceEntry;
+    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0] as any;
     if (fcpEntry) {
-      setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+      setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime as number }));
     }
 
     // Largest Contentful Paint
