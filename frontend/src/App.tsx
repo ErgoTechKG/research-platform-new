@@ -27,6 +27,7 @@ import GradeInquiry from './pages/GradeInquiry'
 import GradeAnalysisReport from './pages/GradeAnalysisReport'
 import EvaluationPlanPublishing from './pages/EvaluationPlanPublishing'
 import ExpertGroupManagement from './pages/ExpertGroupManagement'
+import EvaluationStandardConfig from './pages/EvaluationStandardConfig'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
         <Route path="/grade-analysis-report" element={<GradeAnalysisReport />} />
         <Route path="/evaluation-plan-publishing" element={<EvaluationPlanPublishing />} />
         <Route path="/expert-group-management" element={<ExpertGroupManagement />} />
+        <Route path="/evaluation-standard-config" element={<EvaluationStandardConfig />} />
       </Routes>
       <TestModeIndicator />
     </div>

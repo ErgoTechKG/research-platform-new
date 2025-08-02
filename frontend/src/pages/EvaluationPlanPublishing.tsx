@@ -15,6 +15,7 @@ import {
   AlertCircle, Edit, Trash2, Save, RefreshCw
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 interface EvaluationDimension {
   id: string;
@@ -44,6 +45,7 @@ interface EvaluationPlan {
 
 export default function EvaluationPlanPublishing() {
   const { user } = useAuth();
+  const navigate = useNavigate();
   
   const [currentPlan, setCurrentPlan] = useState<EvaluationPlan>({
     id: '1',
@@ -337,14 +339,24 @@ export default function EvaluationPlanPublishing() {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>评价维度权重配置</span>
-            <div className="flex items-center space-x-2">
-              <span className="text-sm text-gray-600">总计:</span>
-              <Badge 
-                variant={totalWeight === 100 ? 'default' : 'destructive'}
-                className={totalWeight === 100 ? 'bg-green-100 text-green-800' : ''}
+            <div className="flex items-center space-x-4">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => navigate('/evaluation-standard-config')}
               >
-                {totalWeight}%
-              </Badge>
+                <Settings className="w-4 h-4 mr-2" />
+                高级配置
+              </Button>
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-gray-600">总计:</span>
+                <Badge 
+                  variant={totalWeight === 100 ? 'default' : 'destructive'}
+                  className={totalWeight === 100 ? 'bg-green-100 text-green-800' : ''}
+                >
+                  {totalWeight}%
+                </Badge>
+              </div>
             </div>
           </CardTitle>
         </CardHeader>
