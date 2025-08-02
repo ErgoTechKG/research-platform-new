@@ -5,6 +5,7 @@ import Register from './pages/Register'
 import ForgotPassword from './pages/ForgotPassword'
 import UserProfile from './pages/UserProfile'
 import UserManagement from './pages/UserManagement'
+import ProgressTimeline from './pages/ProgressTimeline'
 import Dashboard from './pages/Dashboard'
 import CoursePublish from './pages/CoursePublish'
 import MentorManagement from './pages/MentorManagement'
@@ -81,6 +82,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/user-management" element={<UserManagement />} />
+        <Route path="/progress-timeline" element={<ProgressTimeline />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/course-publish" element={<CoursePublish />} />
         <Route path="/mentor-management" element={<MentorManagement />} />

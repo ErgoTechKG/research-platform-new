@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: FINISHED
 priority: high
 complexity: medium
 dependencies: [story-1-course-information-publishing-interface, story-10-progress-tracking-kanban]
@@ -44,13 +44,13 @@ ui_reference: research-platform-ui-design.md lines 748-768
 - 支持手动调整进度状态
 
 ## 验收标准
-- [ ] 时间轴正确显示总周数和当前位置
-- [ ] 里程碑节点状态显示准确
-- [ ] 点击节点可查看详细信息
-- [ ] 进度百分比计算正确
-- [ ] 悬停交互效果正常
-- [ ] 响应式布局在不同设备上正常显示
-- [ ] 数据更新时界面自动刷新
+- [x] 时间轴正确显示总周数和当前位置
+- [x] 里程碑节点状态显示准确
+- [x] 点击节点可查看详细信息
+- [x] 进度百分比计算正确
+- [x] 悬停交互效果正常
+- [x] 响应式布局在不同设备上正常显示
+- [x] 数据更新时界面自动刷新
 
 ## UI设计参考
 参考进度时间轴可视化设计（research-platform-ui-design.md lines 748-768），包含完整的时间轴布局和里程碑事件展示。
