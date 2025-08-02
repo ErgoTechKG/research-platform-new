@@ -20,6 +20,7 @@ import ResearchReport from './pages/ResearchReport'
 import DefenseScheduling from './pages/DefenseScheduling'
 import OnlineDefensePlatform from './pages/OnlineDefensePlatform'
 import AchievementShowcase from './pages/AchievementShowcase'
+import MultidimensionalScoringForm from './pages/MultidimensionalScoringForm'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/defense-scheduling" element={<DefenseScheduling />} />
         <Route path="/online-defense" element={<OnlineDefensePlatform />} />
         <Route path="/achievement-showcase" element={<AchievementShowcase />} />
+        <Route path="/multidimensional-scoring" element={<MultidimensionalScoringForm />} />
       </Routes>
       <TestModeIndicator />
     </div>
