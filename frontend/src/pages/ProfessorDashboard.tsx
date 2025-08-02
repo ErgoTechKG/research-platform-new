@@ -31,7 +31,7 @@ const ProfessorDashboard = () => {
     return <Navigate to="/login" replace />
   }
   
-  if (user.role !== 'faculty') {
+  if (user.role !== 'professor') {
     return <Navigate to="/dashboard" replace />
   }
 

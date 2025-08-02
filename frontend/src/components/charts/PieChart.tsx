@@ -23,7 +23,7 @@ export function PieChart({
   centerText,
   animate = false 
 }: PieChartProps) {
-  const { total, segments } = useMemo(() => {
+  const { segments } = useMemo(() => {
     const totalValue = data.reduce((sum, item) => sum + item.value, 0)
     let cumulativeAngle = 0
     
@@ -72,7 +72,7 @@ export function PieChart({
       }
     })
     
-    return { total: totalValue, segments: segmentData }
+    return { segments: segmentData }
   }, [data, size])
 
   return (
@@ -147,7 +147,7 @@ export function PieChart({
         </div>
       )}
       
-      <style jsx>{`
+      <style>{`
         @keyframes pie-grow {
           from {
             transform: scale(0);

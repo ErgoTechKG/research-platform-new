@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/select'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import { Breadcrumb } from '@/components/ui/breadcrumb'
 import { Calendar, Clock, Users, Save, Send, FileText, Plus, X, AlertCircle } from 'lucide-react'
 
 interface TaskTemplate {
@@ -216,6 +217,7 @@ export default function TaskPublishing() {
       
       <main className="flex-grow container mx-auto py-8 px-4">
         <div className="max-w-4xl mx-auto">
+          <Breadcrumb className="mb-4" />
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-2xl font-bold text-gray-900">发布任务</h1>
             <Select value={selectedTemplate} onValueChange={handleTemplateSelect}>

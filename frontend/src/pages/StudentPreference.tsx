@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import { Breadcrumb } from '@/components/ui/breadcrumb'
 import { Search, Filter, Plus, GripVertical } from 'lucide-react'
 
 interface Mentor {
@@ -152,6 +153,7 @@ export default function StudentPreference() {
       
       <main className="flex-grow container mx-auto py-8 px-4">
         <div className="max-w-7xl mx-auto">
+          <Breadcrumb className="mb-4" />
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-2xl font-bold text-gray-900">填报导师志愿</h1>
             <div className="flex items-center gap-4">

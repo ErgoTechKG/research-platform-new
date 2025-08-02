@@ -215,7 +215,7 @@ export function SimpleChart({
         </div>
       )}
       
-      <style jsx>{`
+      <style>{`
         .animate-draw-line {
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;

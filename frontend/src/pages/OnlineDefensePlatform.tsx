@@ -75,7 +75,7 @@ export default function OnlineDefensePlatform() {
   const localVideoRef = useRef<HTMLVideoElement>(null);
   const remoteVideoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
   
   // Mock data
   const [participants, setParticipants] = useState<Participant[]>([

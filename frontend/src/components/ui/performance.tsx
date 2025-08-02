@@ -1,6 +1,5 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Skeleton } from '@/components/ui/loading';
@@ -26,7 +25,6 @@ const SimpleChart: React.FC<{ data: any[] }> = ({ data }) => (
   </div>
 );
 
-const LazyChartComponent = lazy(() => Promise.resolve({ default: SimpleChart }));
 
 interface PerformanceCardProps {
   title: string;
@@ -81,7 +79,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = memo(({
               status === 'poor' && 'bg-red-100 text-red-800'
             )}
           >
-            {statusLabels[status]}
+            {statusLabels[status as keyof typeof statusLabels]}
           </Badge>
           {status === 'good' ? (
             <CheckCircle className="h-4 w-4 text-green-600" />
@@ -328,7 +326,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, [metrics, onPerformanceChange]);
 
   // Add performance monitoring overlay in development
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     return (
       <div className="relative">
         {children}

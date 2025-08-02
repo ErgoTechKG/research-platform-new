@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 interface DragAndDropProps {
@@ -123,7 +121,7 @@ export const HoverCard: React.FC<HoverCardProps> = ({
   className
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<number>();
 
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
@@ -229,7 +227,7 @@ export const AutoSave: React.FC<AutoSaveProps> = ({
   const [value, setValue] = useState(initialValue);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<number>();
 
   useEffect(() => {
     if (value !== initialValue) {

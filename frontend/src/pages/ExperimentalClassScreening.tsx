@@ -92,7 +92,7 @@ const ExperimentalClassScreening: React.FC = () => {
   const [selectedHistoryId, setSelectedHistoryId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState('screening');
 
-  const canScreen = user?.role === 'admin' || user?.role === 'faculty';
+  const canScreen = user?.role === 'admin' || user?.role === 'professor';
 
   useEffect(() => {
     loadMockData();

@@ -185,7 +185,7 @@ const AppealManagement: React.FC = () => {
     // Tab filter
     if (activeTab === 'my' && currentUser.role === 'student') {
       filtered = filtered.filter(appeal => appeal.studentId === currentUser.id);
-    } else if (activeTab === 'review' && (currentUser.role === 'faculty' || currentUser.role === 'admin')) {
+    } else if (activeTab === 'review' && (currentUser.role === 'professor' || currentUser.role === 'admin')) {
       filtered = filtered.filter(appeal => appeal.reviewer === currentUser.name || appeal.status === 'pending');
     }
 
@@ -336,7 +336,7 @@ const AppealManagement: React.FC = () => {
   };
 
   const canSubmitAppeal = currentUser.role === 'student';
-  const canReviewAppeal = currentUser.role === 'faculty' || currentUser.role === 'admin';
+  const canReviewAppeal = currentUser.role === 'professor' || currentUser.role === 'admin';
 
   return (
     <div className="container mx-auto py-6 space-y-6">

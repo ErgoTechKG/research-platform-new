@@ -89,7 +89,7 @@ export default function WeeklyMeeting() {
 
     const message: Message = {
       id: Date.now().toString(),
-      sender: user?.role === 'faculty' ? 'teacher' : 'student',
+      sender: user?.role === 'professor' ? 'teacher' : 'student',
       senderName: user?.name || '未知用户',
       content: newMessage,
       timestamp: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }),
@@ -110,7 +110,7 @@ export default function WeeklyMeeting() {
     if (file) {
       const message: Message = {
         id: Date.now().toString(),
-        sender: user?.role === 'faculty' ? 'teacher' : 'student',
+        sender: user?.role === 'professor' ? 'teacher' : 'student',
         senderName: user?.name || '未知用户',
         content: '',
         timestamp: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }),
@@ -128,7 +128,7 @@ export default function WeeklyMeeting() {
   const sendVoiceMessage = () => {
     const message: Message = {
       id: Date.now().toString(),
-      sender: user?.role === 'faculty' ? 'teacher' : 'student',
+      sender: user?.role === 'professor' ? 'teacher' : 'student',
       senderName: user?.name || '未知用户',
       content: '',
       timestamp: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }),
@@ -144,8 +144,8 @@ export default function WeeklyMeeting() {
   // 渲染消息
   const renderMessage = (message: Message) => {
     const isCurrentUser = 
-      (user?.role === 'faculty' && message.sender === 'teacher') ||
-      (user?.role !== 'faculty' && message.sender === 'student')
+      (user?.role === 'professor' && message.sender === 'teacher') ||
+      (user?.role !== 'professor' && message.sender === 'student')
 
     return (
       <div
@@ -226,7 +226,7 @@ export default function WeeklyMeeting() {
             <CardHeader className="border-b">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-xl">
-                  与{user?.role === 'faculty' ? '学生' : '张教授'}的讨论
+                  与{user?.role === 'professor' ? '学生' : '张教授'}的讨论
                 </CardTitle>
                 <div className="flex gap-2">
                   <Button variant="outline" size="sm">

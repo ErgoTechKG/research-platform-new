@@ -14,7 +14,7 @@ import {
   Brain, TrendingUp, AlertTriangle, History, BarChart3, 
   Target, BookOpen, CheckCircle, XCircle, RefreshCw,
   Lightbulb, Users, Calendar, FileText, MessageSquare,
-  PieChart, LineChart, Activity, Zap, Download
+  PieChart, LineChart, Activity, Zap, Download, Star, Calculator
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
