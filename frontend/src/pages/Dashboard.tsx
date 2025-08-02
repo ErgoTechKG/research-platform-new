@@ -55,6 +55,7 @@ const Dashboard = () => {
       { icon: Presentation, title: '宣讲会管理', description: '管理Intro Session', color: 'bg-pink-500', path: '/seminar-management' },
       { icon: Archive, title: '档案归档系统', description: '永久保存评价材料', color: 'bg-slate-500', path: '/archive-filing-system' },
       { icon: BarChart, title: '全局数据', description: '查看系统运行数据', color: 'bg-yellow-500' },
+      { icon: BarChart, title: '实时数据仪表盘', description: '实时数据可视化和异常预警', color: 'bg-cyan-500', path: '/realtime-data-dashboard' },
       { icon: FileText, title: '报告生成', description: '生成各类统计报告', color: 'bg-purple-500', path: '/report-generator' }
     ]
   }

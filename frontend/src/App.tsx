@@ -69,6 +69,7 @@ import AIHomeworkDetection from './pages/AIHomeworkDetection'
 import AIScoringAssistant from './pages/AIScoringAssistant'
 import AutomatedDataCollection from './pages/AutomatedDataCollection'
 import LLMReportGeneration from './pages/LLMReportGeneration'
+import RealtimeDataDashboard from './pages/RealtimeDataDashboard'
 import StudentDashboard from './pages/StudentDashboard'
 import ProfessorDashboard from './pages/ProfessorDashboard'
 import SecretaryDashboard from './pages/SecretaryDashboard'
@@ -150,6 +151,7 @@ function App() {
         <Route path="/ai-scoring-assistant" element={<AIScoringAssistant />} />
         <Route path="/automated-data-collection" element={<AutomatedDataCollection />} />
         <Route path="/llm-report-generation" element={<LLMReportGeneration />} />
+        <Route path="/realtime-data-dashboard" element={<RealtimeDataDashboard />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/professor-dashboard" element={<ProfessorDashboard />} />
         <Route path="/secretary-dashboard" element={<SecretaryDashboard />} />
