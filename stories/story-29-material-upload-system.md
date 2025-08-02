@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: finished
 priority: high
 complexity: medium
 dependencies: []
@@ -29,11 +29,11 @@ ui_reference: course-module-workflow.md lines 501-526
 - 删除和替换功能
 
 ## 验收标准
-- [ ] 拖拽上传功能正常
-- [ ] 批量上传支持
-- [ ] 格式验证有效
-- [ ] 进度显示准确
-- [ ] 分类功能正确
+- [x] 拖拽上传功能正常
+- [x] 批量上传支持
+- [x] 格式验证有效
+- [x] 进度显示准确
+- [x] 分类功能正确
 
 ## UI设计参考
 基于学生信息填报界面的文件上传部分（course-module-workflow.md lines 501-526）。
