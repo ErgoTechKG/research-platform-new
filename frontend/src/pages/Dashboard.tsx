@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation } from 'lucide-react'
+import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation, Clock } from 'lucide-react'
 
 const Dashboard = () => {
   const { user } = useAuth()
@@ -19,6 +19,7 @@ const Dashboard = () => {
     student: [
       { icon: BookOpen, title: '我的课程', description: '查看已选课程和课程进度', color: 'bg-blue-500' },
       { icon: Calendar, title: '实验室轮转', description: '查看和申请实验室轮转', color: 'bg-green-500' },
+      { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
       { icon: FileText, title: '学习报告', description: '提交和查看学习报告', color: 'bg-yellow-500' },
       { icon: BarChart, title: '成绩查询', description: '查看各科成绩和排名', color: 'bg-purple-500' }
     ],
@@ -26,6 +27,7 @@ const Dashboard = () => {
       { icon: Users, title: '学生管理', description: '查看和管理指导学生', color: 'bg-blue-500' },
       { icon: BookOpen, title: '课程管理', description: '管理教授的课程', color: 'bg-green-500' },
       { icon: PlusCircle, title: '发布课程', description: '发布实验室轮转课程', color: 'bg-orange-500', path: '/course-publish' },
+      { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
       { icon: Presentation, title: '宣讲会管理', description: '管理Intro Session', color: 'bg-pink-500', path: '/seminar-management' },
       { icon: FileText, title: '评价管理', description: '对学生进行评价打分', color: 'bg-yellow-500' },
       { icon: BarChart, title: '数据分析', description: '查看教学数据分析', color: 'bg-purple-500' }
@@ -35,6 +37,7 @@ const Dashboard = () => {
       { icon: UserCheck, title: '导师管理', description: '管理导师资源信息', color: 'bg-indigo-500', path: '/mentor-management' },
       { icon: Settings, title: '系统设置', description: '配置系统参数', color: 'bg-green-500' },
       { icon: PlusCircle, title: '发布课程', description: '发布实验室轮转课程', color: 'bg-orange-500', path: '/course-publish' },
+      { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
       { icon: Presentation, title: '宣讲会管理', description: '管理Intro Session', color: 'bg-pink-500', path: '/seminar-management' },
       { icon: BarChart, title: '全局数据', description: '查看系统运行数据', color: 'bg-yellow-500' },
       { icon: FileText, title: '报告生成', description: '生成各类统计报告', color: 'bg-purple-500' }

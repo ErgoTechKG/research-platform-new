@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard'
 import CoursePublish from './pages/CoursePublish'
 import MentorManagement from './pages/MentorManagement'
 import SeminarManagement from './pages/SeminarManagement'
+import CourseTimeline from './pages/CourseTimeline'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/course-publish" element={<CoursePublish />} />
         <Route path="/mentor-management" element={<MentorManagement />} />
         <Route path="/seminar-management" element={<SeminarManagement />} />
+        <Route path="/course-timeline" element={<CourseTimeline />} />
       </Routes>
       <TestModeIndicator />
     </div>
