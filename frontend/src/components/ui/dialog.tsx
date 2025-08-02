@@ -91,6 +91,18 @@ const DialogTitle = React.forwardRef<
 ))
 DialogTitle.displayName = "DialogTitle"
 
+const DialogDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn("text-sm text-gray-600", className)}
+    {...props}
+  />
+))
+DialogDescription.displayName = "DialogDescription"
+
 const DialogFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -103,4 +115,4 @@ const DialogFooter = React.forwardRef<
 ))
 DialogFooter.displayName = "DialogFooter"
 
-export { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogFooter }
+export { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter }
