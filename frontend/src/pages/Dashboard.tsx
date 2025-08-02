@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation, Clock, Heart } from 'lucide-react'
+import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation, Clock, Heart, UserSearch } from 'lucide-react'
 
 const Dashboard = () => {
   const { user } = useAuth()
@@ -26,6 +26,7 @@ const Dashboard = () => {
     ],
     faculty: [
       { icon: Users, title: '学生管理', description: '查看和管理指导学生', color: 'bg-blue-500' },
+      { icon: UserSearch, title: '学生筛选', description: '筛选和管理学生申请', color: 'bg-cyan-500', path: '/mentor-screening' },
       { icon: BookOpen, title: '课程管理', description: '管理教授的课程', color: 'bg-green-500' },
       { icon: PlusCircle, title: '发布课程', description: '发布实验室轮转课程', color: 'bg-orange-500', path: '/course-publish' },
       { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
