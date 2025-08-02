@@ -75,6 +75,11 @@ import StudentDashboard from './pages/StudentDashboard'
 import ProfessorDashboard from './pages/ProfessorDashboard'
 import SecretaryDashboard from './pages/SecretaryDashboard'
 import LeaderDashboard from './pages/LeaderDashboard'
+import DesignSystemDemo from './pages/DesignSystemDemo'
+import InteractionPatternsDemo from './pages/InteractionPatternsDemo'
+import ResponsiveDemo from './pages/ResponsiveDemo'
+import AccessibilityDemo from './pages/AccessibilityDemo'
+import PerformanceDemo from './pages/PerformanceDemo'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -158,6 +163,11 @@ function App() {
         <Route path="/professor-dashboard" element={<ProfessorDashboard />} />
         <Route path="/secretary-dashboard" element={<SecretaryDashboard />} />
         <Route path="/leader-dashboard" element={<LeaderDashboard />} />
+        <Route path="/design-system" element={<DesignSystemDemo />} />
+        <Route path="/interaction-patterns" element={<InteractionPatternsDemo />} />
+        <Route path="/responsive-demo" element={<ResponsiveDemo />} />
+        <Route path="/accessibility-demo" element={<AccessibilityDemo />} />
+        <Route path="/performance-demo" element={<PerformanceDemo />} />
       </Routes>
       <TestModeIndicator />
     </div>
