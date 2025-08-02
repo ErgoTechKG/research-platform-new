@@ -10,3 +10,7 @@
 - Test Different Permissions: Visit /dashboard to see role-specific content
 
 - The system maintains security in production (when VITE_TEST_MODE=false) while providing convenient testing during development
+
+## Project Structure
+
+- The frontend code is at frontend folder, follow old style and pattern
