@@ -43,6 +43,7 @@ import MoralCharacterEvaluationInterface from './pages/MoralCharacterEvaluationI
 import AutomaticCalculationEngine from './pages/AutomaticCalculationEngine'
 import GradePreview from './pages/GradePreview'
 import AnomalyDetectionSystem from './pages/AnomalyDetectionSystem'
+import ReviewConfirmationProcess from './pages/ReviewConfirmationProcess'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -94,6 +95,7 @@ function App() {
         <Route path="/automatic-calculation-engine" element={<AutomaticCalculationEngine />} />
         <Route path="/grade-preview" element={<GradePreview />} />
         <Route path="/anomaly-detection" element={<AnomalyDetectionSystem />} />
+        <Route path="/review-confirmation" element={<ReviewConfirmationProcess />} />
       </Routes>
       <TestModeIndicator />
     </div>
