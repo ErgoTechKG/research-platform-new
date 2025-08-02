@@ -14,6 +14,7 @@ import TaskPublishing from './pages/TaskPublishing'
 import ProgressTracking from './pages/ProgressTracking'
 import WeeklyMeeting from './pages/WeeklyMeeting'
 import LearningReport from './pages/LearningReport'
+import InstantMessaging from './pages/InstantMessaging'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/progress-tracking" element={<ProgressTracking />} />
         <Route path="/weekly-meeting" element={<WeeklyMeeting />} />
         <Route path="/learning-report" element={<LearningReport />} />
+        <Route path="/instant-messaging" element={<InstantMessaging />} />
       </Routes>
       <TestModeIndicator />
     </div>
