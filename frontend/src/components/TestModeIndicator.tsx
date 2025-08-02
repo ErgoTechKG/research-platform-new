@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Shield, User, GraduationCap } from 'lucide-react'
+import { Shield, User, GraduationCap, FileText } from 'lucide-react'
 
 const TestModeIndicator = () => {
   const { user, isTestMode, switchRole } = useAuth()
@@ -20,10 +20,15 @@ const TestModeIndicator = () => {
       label: '学生',
       color: 'bg-blue-500'
     },
-    faculty: {
+    professor: {
       icon: User,
-      label: '教师',
+      label: '教授',
       color: 'bg-green-500'
+    },
+    secretary: {
+      icon: FileText,
+      label: '秘书',
+      color: 'bg-orange-500'
     },
     admin: {
       icon: Shield,
@@ -66,7 +71,8 @@ const TestModeIndicator = () => {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="student">学生</SelectItem>
-            <SelectItem value="faculty">教师</SelectItem>
+            <SelectItem value="professor">教授</SelectItem>
+            <SelectItem value="secretary">秘书</SelectItem>
             <SelectItem value="admin">管理员</SelectItem>
           </SelectContent>
         </Select>

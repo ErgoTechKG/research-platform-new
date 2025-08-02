@@ -1,6 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Register from './pages/Register'
+import ForgotPassword from './pages/ForgotPassword'
+import UserProfile from './pages/UserProfile'
+import UserManagement from './pages/UserManagement'
 import Dashboard from './pages/Dashboard'
 import CoursePublish from './pages/CoursePublish'
 import MentorManagement from './pages/MentorManagement'
@@ -73,6 +77,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/user-management" element={<UserManagement />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/course-publish" element={<CoursePublish />} />
         <Route path="/mentor-management" element={<MentorManagement />} />
