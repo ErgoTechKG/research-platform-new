@@ -49,6 +49,7 @@ import GradeAnnouncementSystem from './pages/GradeAnnouncementSystem'
 import AppealManagement from './pages/AppealManagement'
 import ExperimentalClassScreening from './pages/ExperimentalClassScreening'
 import ArchiveFilingSystem from './pages/ArchiveFilingSystem'
+import ReportGenerator from './pages/ReportGenerator'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -106,6 +107,7 @@ function App() {
         <Route path="/appeal-management" element={<AppealManagement />} />
         <Route path="/experimental-class-screening" element={<ExperimentalClassScreening />} />
         <Route path="/archive-filing-system" element={<ArchiveFilingSystem />} />
+        <Route path="/report-generator" element={<ReportGenerator />} />
       </Routes>
       <TestModeIndicator />
     </div>
