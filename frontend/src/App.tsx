@@ -35,6 +35,7 @@ import OCRRecognitionIntegration from './pages/OCRRecognitionIntegration'
 import PreliminaryReviewWorkbench from './pages/PreliminaryReviewWorkbench'
 import ProgressTrackingPanel from './pages/ProgressTrackingPanel'
 import DimensionalScoringInterface from './pages/DimensionalScoringInterface'
+import GradeImportSystem from './pages/GradeImportSystem'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
         <Route path="/preliminary-review-workbench" element={<PreliminaryReviewWorkbench />} />
         <Route path="/progress-tracking-panel" element={<ProgressTrackingPanel />} />
         <Route path="/dimensional-scoring" element={<DimensionalScoringInterface />} />
+        <Route path="/grade-import-system" element={<GradeImportSystem />} />
       </Routes>
       <TestModeIndicator />
     </div>
