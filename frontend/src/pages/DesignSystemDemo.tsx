@@ -136,11 +136,12 @@ const DesignSystemDemo: React.FC = () => {
       </div>
 
       <Tabs defaultValue="colors" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-6">
+        <TabsList className="grid w-full grid-cols-7">
           <TabsTrigger value="colors">色彩系统</TabsTrigger>
           <TabsTrigger value="typography">字体系统</TabsTrigger>
           <TabsTrigger value="spacing">间距系统</TabsTrigger>
           <TabsTrigger value="components">基础组件</TabsTrigger>
+          <TabsTrigger value="premium">高级组件</TabsTrigger>
           <TabsTrigger value="business">业务组件</TabsTrigger>
           <TabsTrigger value="patterns">交互模式</TabsTrigger>
         </TabsList>
@@ -269,19 +270,79 @@ const DesignSystemDemo: React.FC = () => {
                 <CardTitle>按钮组件</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <div className="flex gap-4 items-center">
-                    <Button>Primary</Button>
-                    <Button variant="secondary">Secondary</Button>
-                    <Button variant="outline">Outline</Button>
-                    <Button variant="ghost">Ghost</Button>
-                    <Button variant="destructive">Destructive</Button>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-sm font-medium mb-3">基础按钮</h4>
+                    <div className="flex gap-4 items-center flex-wrap">
+                      <Button>Primary</Button>
+                      <Button variant="secondary">Secondary</Button>
+                      <Button variant="outline">Outline</Button>
+                      <Button variant="ghost">Ghost</Button>
+                      <Button variant="destructive">Destructive</Button>
+                    </div>
                   </div>
-                  <div className="flex gap-4 items-center">
-                    <Button size="sm">Small</Button>
-                    <Button size="default">Default</Button>
-                    <Button size="lg">Large</Button>
+                  
+                  <div>
+                    <h4 className="text-sm font-medium mb-3">高级按钮</h4>
+                    <div className="flex gap-4 items-center flex-wrap">
+                      <Button variant="premium">Premium</Button>
+                      <Button variant="glass">Glass</Button>
+                      <Button variant="gradient">Gradient</Button>
+                      <Button variant="glow">Glow</Button>
+                      <Button variant="neumorphic">Neumorphic</Button>
+                      <Button variant="aurora">Aurora</Button>
+                    </div>
                   </div>
+                  
+                  <div>
+                    <h4 className="text-sm font-medium mb-3">尺寸变化</h4>
+                    <div className="flex gap-4 items-center flex-wrap">
+                      <Button size="sm">Small</Button>
+                      <Button size="default">Default</Button>
+                      <Button size="lg">Large</Button>
+                      <Button size="xl">Extra Large</Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>卡片组件</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <Card variant="default">
+                    <CardContent className="p-4">
+                      <p className="text-sm">默认卡片</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="premium">
+                    <CardContent className="p-4">
+                      <p className="text-sm">高级卡片</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="glass">
+                    <CardContent className="p-4">
+                      <p className="text-sm">玻璃卡片</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="neumorphic">
+                    <CardContent className="p-4">
+                      <p className="text-sm">新拟态卡片</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="elevated">
+                    <CardContent className="p-4">
+                      <p className="text-sm">浮起卡片</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="bordered">
+                    <CardContent className="p-4">
+                      <p className="text-sm">边框卡片</p>
+                    </CardContent>
+                  </Card>
                 </div>
               </CardContent>
             </Card>
@@ -296,6 +357,195 @@ const DesignSystemDemo: React.FC = () => {
                   <Badge variant="secondary">Secondary</Badge>
                   <Badge variant="outline">Outline</Badge>
                   <Badge variant="destructive">Destructive</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="premium">
+          <div className="space-y-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>高级动画效果</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">呼吸效果</h4>
+                    <div className="h-20 w-20 bg-primary rounded-lg animate-breathe mx-auto" />
+                    <code className="text-xs bg-muted p-1 rounded">animate-breathe</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">摇摆效果</h4>
+                    <Button 
+                      className="animate-wiggle mx-auto" 
+                      onClick={(e) => {
+                        e.currentTarget.classList.remove('animate-wiggle');
+                        setTimeout(() => e.currentTarget.classList.add('animate-wiggle'), 10);
+                      }}
+                    >
+                      点击摇摆
+                    </Button>
+                    <code className="text-xs bg-muted p-1 rounded block">animate-wiggle</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">上滑淡入</h4>
+                    <Card variant="premium" className="animate-slide-up-fade">
+                      <CardContent className="p-4">
+                        <p className="text-sm">滑入卡片</p>
+                      </CardContent>
+                    </Card>
+                    <code className="text-xs bg-muted p-1 rounded">animate-slide-up-fade</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">缩放弹入</h4>
+                    <div className="h-16 w-16 bg-gradient-primary rounded-lg animate-bounce-scale mx-auto" />
+                    <code className="text-xs bg-muted p-1 rounded">animate-bounce-scale</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">旋转发光</h4>
+                    <div className="h-16 w-16 bg-secondary-accent rounded-lg animate-rotate-glow mx-auto" />
+                    <code className="text-xs bg-muted p-1 rounded">animate-rotate-glow</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">渐变流动</h4>
+                    <div className="h-16 w-full gradient-primary animate-gradient-shift rounded-lg" />
+                    <code className="text-xs bg-muted p-1 rounded">animate-gradient-shift</code>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>高级交互效果</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">悬浮抬升</h4>
+                    <Card className="hover-lift cursor-pointer">
+                      <CardContent className="p-4">
+                        <p className="text-sm">悬浮我</p>
+                      </CardContent>
+                    </Card>
+                    <code className="text-xs bg-muted p-1 rounded">hover-lift</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">悬浮发光</h4>
+                    <div className="h-16 w-16 bg-primary rounded-lg hover-glow-primary cursor-pointer mx-auto" />
+                    <code className="text-xs bg-muted p-1 rounded">hover-glow-primary</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">磁性悬浮</h4>
+                    <Badge className="magnetic-hover cursor-pointer">磁性标签</Badge>
+                    <code className="text-xs bg-muted p-1 rounded">magnetic-hover</code>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>玻璃态与新拟态效果</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <h4 className="text-sm font-medium">玻璃态效果</h4>
+                    <div className="p-6 gradient-mesh rounded-xl min-h-[200px] relative">
+                      <Card variant="glass" className="absolute inset-4">
+                        <CardContent className="p-4 text-white">
+                          <h5 className="font-medium mb-2">玻璃卡片</h5>
+                          <p className="text-sm">背景模糊，透明效果</p>
+                          <Button variant="glass" className="mt-3">玻璃按钮</Button>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <h4 className="text-sm font-medium">新拟态效果</h4>
+                    <div className="p-6 bg-background rounded-xl">
+                      <Card variant="neumorphic" className="mb-4">
+                        <CardContent className="p-4">
+                          <h5 className="font-medium mb-2">新拟态卡片</h5>
+                          <p className="text-sm">内嵌外凸的立体效果</p>
+                          <Button variant="neumorphic" className="mt-3">新拟态按钮</Button>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>加载状态动画</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">加载点</h4>
+                    <div className="text-center">
+                      <span className="loading-dots">加载中</span>
+                    </div>
+                    <code className="text-xs bg-muted p-1 rounded">loading-dots</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">加载条</h4>
+                    <div className="loading-bars justify-center">
+                      <div />
+                      <div />
+                      <div />
+                      <div />
+                    </div>
+                    <code className="text-xs bg-muted p-1 rounded">loading-bars</code>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">闪烁效果</h4>
+                    <div className="h-4 bg-muted rounded loading-shimmer" />
+                    <code className="text-xs bg-muted p-1 rounded">loading-shimmer</code>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>状态指示器</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex gap-3 flex-wrap">
+                    <div className="status-indicator success">
+                      <div className="w-2 h-2 bg-success rounded-full" />
+                      成功状态
+                    </div>
+                    <div className="status-indicator warning">
+                      <div className="w-2 h-2 bg-warning rounded-full" />
+                      警告状态
+                    </div>
+                    <div className="status-indicator error">
+                      <div className="w-2 h-2 bg-destructive rounded-full" />
+                      错误状态
+                    </div>
+                    <div className="status-indicator info">
+                      <div className="w-2 h-2 bg-primary rounded-full" />
+                      信息状态
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
