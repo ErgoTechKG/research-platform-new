@@ -29,6 +29,7 @@ import EvaluationPlanPublishing from './pages/EvaluationPlanPublishing'
 import ExpertGroupManagement from './pages/ExpertGroupManagement'
 import EvaluationStandardConfig from './pages/EvaluationStandardConfig'
 import TimelinePlanning from './pages/TimelinePlanning'
+import InformationCollectionForm from './pages/InformationCollectionForm'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
         <Route path="/expert-group-management" element={<ExpertGroupManagement />} />
         <Route path="/evaluation-standard-config" element={<EvaluationStandardConfig />} />
         <Route path="/timeline-planning" element={<TimelinePlanning />} />
+        <Route path="/information-collection-form" element={<InformationCollectionForm />} />
       </Routes>
       <TestModeIndicator />
     </div>
