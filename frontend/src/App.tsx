@@ -60,6 +60,7 @@ import AITeachingAssistant from './pages/AITeachingAssistant'
 import SocialLearningNetwork from './pages/SocialLearningNetwork'
 import DataAnalysisCenter from './pages/DataAnalysisCenter'
 import ResourceSharingCenter from './pages/ResourceSharingCenter'
+import StudentDashboard from './pages/StudentDashboard'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -128,6 +129,7 @@ function App() {
         <Route path="/social-learning-network" element={<SocialLearningNetwork />} />
         <Route path="/data-analysis-center" element={<DataAnalysisCenter />} />
         <Route path="/resource-sharing-center" element={<ResourceSharingCenter />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
       </Routes>
       <TestModeIndicator />
     </div>
