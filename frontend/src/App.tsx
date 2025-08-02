@@ -24,6 +24,7 @@ import MultidimensionalScoringForm from './pages/MultidimensionalScoringForm'
 import ScoringStandardConfig from './pages/ScoringStandardConfig'
 import BatchScoringInterface from './pages/BatchScoringInterface'
 import GradeInquiry from './pages/GradeInquiry'
+import GradeAnalysisReport from './pages/GradeAnalysisReport'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
         <Route path="/scoring-standard-config" element={<ScoringStandardConfig />} />
         <Route path="/batch-scoring" element={<BatchScoringInterface />} />
         <Route path="/grade-inquiry" element={<GradeInquiry />} />
+        <Route path="/grade-analysis-report" element={<GradeAnalysisReport />} />
       </Routes>
       <TestModeIndicator />
     </div>
