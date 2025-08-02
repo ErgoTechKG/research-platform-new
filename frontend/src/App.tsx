@@ -55,6 +55,7 @@ import NotificationCenter from './pages/NotificationCenter'
 import SmartReminderRuleEngine from './pages/SmartReminderRuleEngine'
 import BatchImportTool from './pages/BatchImportTool'
 import BatchOperationsManagement from './pages/BatchOperationsManagement'
+import AutomaticReportGenerator from './pages/AutomaticReportGenerator'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -118,6 +119,7 @@ function App() {
         <Route path="/smart-reminder-rule-engine" element={<SmartReminderRuleEngine />} />
         <Route path="/batch-import-tool" element={<BatchImportTool />} />
         <Route path="/batch-operations" element={<BatchOperationsManagement />} />
+        <Route path="/automatic-report-generator" element={<AutomaticReportGenerator />} />
       </Routes>
       <TestModeIndicator />
     </div>
