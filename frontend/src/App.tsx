@@ -26,6 +26,7 @@ import BatchScoringInterface from './pages/BatchScoringInterface'
 import GradeInquiry from './pages/GradeInquiry'
 import GradeAnalysisReport from './pages/GradeAnalysisReport'
 import EvaluationPlanPublishing from './pages/EvaluationPlanPublishing'
+import ExpertGroupManagement from './pages/ExpertGroupManagement'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
         <Route path="/grade-inquiry" element={<GradeInquiry />} />
         <Route path="/grade-analysis-report" element={<GradeAnalysisReport />} />
         <Route path="/evaluation-plan-publishing" element={<EvaluationPlanPublishing />} />
+        <Route path="/expert-group-management" element={<ExpertGroupManagement />} />
       </Routes>
       <TestModeIndicator />
     </div>
