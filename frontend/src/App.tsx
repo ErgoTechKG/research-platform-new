@@ -80,6 +80,7 @@ import ReportGenerator from './pages/ReportGenerator'
 import MilestoneReportSubmission from './pages/MilestoneReportSubmission'
 import NotificationCenter from './pages/NotificationCenter'
 import SmartReminderRuleEngine from './pages/SmartReminderRuleEngine'
+import SmartTaskReminder from './pages/SmartTaskReminder'
 import BatchImportTool from './pages/BatchImportTool'
 import BatchOperationsManagement from './pages/BatchOperationsManagement'
 import AutomaticReportGenerator from './pages/AutomaticReportGenerator'
@@ -207,6 +208,7 @@ function App() {
         <Route path="/system/milestone-report" element={<MilestoneReportSubmission />} />
         <Route path="/system/notification-center" element={<NotificationCenter />} />
         <Route path="/system/smart-reminder-rule-engine" element={<SmartReminderRuleEngine />} />
+        <Route path="/system/smart-task-reminder" element={<SmartTaskReminder />} />
         <Route path="/system/batch-import-tool" element={<BatchImportTool />} />
         <Route path="/system/batch-operations" element={<BatchOperationsManagement />} />
         <Route path="/system/automatic-report-generator" element={<AutomaticReportGenerator />} />
@@ -276,6 +278,7 @@ function App() {
         <Route path="/milestone-report" element={<MilestoneReportSubmission />} />
         <Route path="/notification-center" element={<NotificationCenter />} />
         <Route path="/smart-reminder-rule-engine" element={<SmartReminderRuleEngine />} />
+        <Route path="/smart-task-reminder" element={<SmartTaskReminder />} />
         <Route path="/batch-import-tool" element={<BatchImportTool />} />
         <Route path="/batch-operations" element={<BatchOperationsManagement />} />
         <Route path="/automatic-report-generator" element={<AutomaticReportGenerator />} />
