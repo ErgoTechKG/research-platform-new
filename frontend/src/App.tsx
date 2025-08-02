@@ -15,6 +15,7 @@ import ProgressTracking from './pages/ProgressTracking'
 import WeeklyMeeting from './pages/WeeklyMeeting'
 import LearningReport from './pages/LearningReport'
 import InstantMessaging from './pages/InstantMessaging'
+import PosterDesigner from './pages/PosterDesigner'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/weekly-meeting" element={<WeeklyMeeting />} />
         <Route path="/learning-report" element={<LearningReport />} />
         <Route path="/instant-messaging" element={<InstantMessaging />} />
+        <Route path="/poster-designer" element={<PosterDesigner />} />
       </Routes>
       <TestModeIndicator />
     </div>

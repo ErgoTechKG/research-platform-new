@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation, Clock, Heart, UserSearch, GitBranch, ClipboardList, KanbanSquare, MessageSquare, MessageCircle } from 'lucide-react'
+import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation, Clock, Heart, UserSearch, GitBranch, ClipboardList, KanbanSquare, MessageSquare, MessageCircle, Palette } from 'lucide-react'
 
 const Dashboard = () => {
   const { user } = useAuth()
@@ -23,6 +23,7 @@ const Dashboard = () => {
       { icon: KanbanSquare, title: '任务看板', description: '查看和管理学习任务进度', color: 'bg-orange-500', path: '/progress-tracking' },
       { icon: MessageSquare, title: '师生互动', description: '与导师进行在线讨论', color: 'bg-cyan-500', path: '/weekly-meeting' },
       { icon: MessageCircle, title: '即时通讯', description: '实时消息沟通和文件传输', color: 'bg-teal-500', path: '/instant-messaging' },
+      { icon: Palette, title: '海报设计', description: '在线设计学术海报', color: 'bg-purple-500', path: '/poster-designer' },
       { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
       { icon: FileText, title: '学习报告', description: '提交和查看学习报告', color: 'bg-yellow-500', path: '/learning-report' },
       { icon: BarChart, title: '成绩查询', description: '查看各科成绩和排名', color: 'bg-purple-500' }
