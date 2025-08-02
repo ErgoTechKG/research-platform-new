@@ -34,6 +34,7 @@ import MaterialUploadSystem from './pages/MaterialUploadSystem'
 import OCRRecognitionIntegration from './pages/OCRRecognitionIntegration'
 import PreliminaryReviewWorkbench from './pages/PreliminaryReviewWorkbench'
 import ProgressTrackingPanel from './pages/ProgressTrackingPanel'
+import DimensionalScoringInterface from './pages/DimensionalScoringInterface'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
         <Route path="/ocr-recognition-integration" element={<OCRRecognitionIntegration />} />
         <Route path="/preliminary-review-workbench" element={<PreliminaryReviewWorkbench />} />
         <Route path="/progress-tracking-panel" element={<ProgressTrackingPanel />} />
+        <Route path="/dimensional-scoring" element={<DimensionalScoringInterface />} />
       </Routes>
       <TestModeIndicator />
     </div>
