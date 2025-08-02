@@ -54,6 +54,7 @@ import MilestoneReportSubmission from './pages/MilestoneReportSubmission'
 import NotificationCenter from './pages/NotificationCenter'
 import SmartReminderRuleEngine from './pages/SmartReminderRuleEngine'
 import BatchImportTool from './pages/BatchImportTool'
+import BatchOperationsManagement from './pages/BatchOperationsManagement'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -116,6 +117,7 @@ function App() {
         <Route path="/notification-center" element={<NotificationCenter />} />
         <Route path="/smart-reminder-rule-engine" element={<SmartReminderRuleEngine />} />
         <Route path="/batch-import-tool" element={<BatchImportTool />} />
+        <Route path="/batch-operations" element={<BatchOperationsManagement />} />
       </Routes>
       <TestModeIndicator />
     </div>
