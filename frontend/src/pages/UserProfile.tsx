@@ -14,7 +14,7 @@ import {
   Mail, 
   Phone, 
   Building, 
-  IdCard, 
+  CreditCard, 
   Camera, 
   Save, 
   Eye, 
@@ -302,7 +302,7 @@ const UserProfile = () => {
                   
                   {user.studentId && (
                     <div className="flex items-center space-x-3">
-                      <IdCard className="w-4 h-4 text-gray-400" />
+                      <CreditCard className="w-4 h-4 text-gray-400" />
                       <span className="text-sm text-gray-600">{user.studentId}</span>
                     </div>
                   )}

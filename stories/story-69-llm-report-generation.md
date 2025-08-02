@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: FINISHED
 priority: medium
 complexity: high
 dependencies: [story-68-automated-data-collection, story-48-report-generator, story-55-automatic-report-generator]
