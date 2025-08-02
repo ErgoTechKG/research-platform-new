@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation, Clock, Heart, UserSearch, GitBranch, ClipboardList, KanbanSquare, MessageSquare, MessageCircle, Palette, Shield } from 'lucide-react'
+import { BookOpen, Users, BarChart, Settings, FileText, Calendar, PlusCircle, UserCheck, Presentation, Clock, Heart, UserSearch, GitBranch, ClipboardList, KanbanSquare, MessageSquare, MessageCircle, Palette, Shield, Archive } from 'lucide-react'
 
 const Dashboard = () => {
   const { user } = useAuth()
@@ -53,6 +53,7 @@ const Dashboard = () => {
       { icon: PlusCircle, title: '发布课程', description: '发布实验室轮转课程', color: 'bg-orange-500', path: '/course-publish' },
       { icon: Clock, title: '进度时间轴', description: '查看课程进度和里程碑', color: 'bg-indigo-500', path: '/course-timeline' },
       { icon: Presentation, title: '宣讲会管理', description: '管理Intro Session', color: 'bg-pink-500', path: '/seminar-management' },
+      { icon: Archive, title: '档案归档系统', description: '永久保存评价材料', color: 'bg-slate-500', path: '/archive-filing-system' },
       { icon: BarChart, title: '全局数据', description: '查看系统运行数据', color: 'bg-yellow-500' },
       { icon: FileText, title: '报告生成', description: '生成各类统计报告', color: 'bg-purple-500' }
     ]
