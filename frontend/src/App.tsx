@@ -46,6 +46,7 @@ import AnomalyDetectionSystem from './pages/AnomalyDetectionSystem'
 import ReviewConfirmationProcess from './pages/ReviewConfirmationProcess'
 import GradeLockingMechanism from './pages/GradeLockingMechanism'
 import GradeAnnouncementSystem from './pages/GradeAnnouncementSystem'
+import AppealManagement from './pages/AppealManagement'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -100,6 +101,7 @@ function App() {
         <Route path="/review-confirmation" element={<ReviewConfirmationProcess />} />
         <Route path="/grade-locking" element={<GradeLockingMechanism />} />
         <Route path="/grade-announcement" element={<GradeAnnouncementSystem />} />
+        <Route path="/appeal-management" element={<AppealManagement />} />
       </Routes>
       <TestModeIndicator />
     </div>
