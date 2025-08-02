@@ -44,6 +44,7 @@ import AutomaticCalculationEngine from './pages/AutomaticCalculationEngine'
 import GradePreview from './pages/GradePreview'
 import AnomalyDetectionSystem from './pages/AnomalyDetectionSystem'
 import ReviewConfirmationProcess from './pages/ReviewConfirmationProcess'
+import GradeLockingMechanism from './pages/GradeLockingMechanism'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -96,6 +97,7 @@ function App() {
         <Route path="/grade-preview" element={<GradePreview />} />
         <Route path="/anomaly-detection" element={<AnomalyDetectionSystem />} />
         <Route path="/review-confirmation" element={<ReviewConfirmationProcess />} />
+        <Route path="/grade-locking" element={<GradeLockingMechanism />} />
       </Routes>
       <TestModeIndicator />
     </div>
