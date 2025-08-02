@@ -59,6 +59,7 @@ import AutomaticReportGenerator from './pages/AutomaticReportGenerator'
 import AITeachingAssistant from './pages/AITeachingAssistant'
 import SocialLearningNetwork from './pages/SocialLearningNetwork'
 import DataAnalysisCenter from './pages/DataAnalysisCenter'
+import ResourceSharingCenter from './pages/ResourceSharingCenter'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -126,6 +127,7 @@ function App() {
         <Route path="/ai-teaching-assistant" element={<AITeachingAssistant />} />
         <Route path="/social-learning-network" element={<SocialLearningNetwork />} />
         <Route path="/data-analysis-center" element={<DataAnalysisCenter />} />
+        <Route path="/resource-sharing-center" element={<ResourceSharingCenter />} />
       </Routes>
       <TestModeIndicator />
     </div>
