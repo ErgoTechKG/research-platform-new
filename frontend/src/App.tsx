@@ -10,6 +10,7 @@ import StudentPreference from './pages/StudentPreference'
 import MentorScreening from './pages/MentorScreening'
 import MatchingVisualization from './pages/MatchingVisualization'
 import AdjustmentManagement from './pages/AdjustmentManagement'
+import TaskPublishing from './pages/TaskPublishing'
 import TestModeIndicator from './components/TestModeIndicator'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/mentor-screening" element={<MentorScreening />} />
         <Route path="/matching-visualization" element={<MatchingVisualization />} />
         <Route path="/adjustment-management" element={<AdjustmentManagement />} />
+        <Route path="/task-publishing" element={<TaskPublishing />} />
       </Routes>
       <TestModeIndicator />
     </div>
