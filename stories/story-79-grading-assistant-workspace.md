@@ -1,5 +1,5 @@
 ---
-status: pending
+status: finished
 priority: high
 complexity: medium
 dependencies: ["历史数据分析"]

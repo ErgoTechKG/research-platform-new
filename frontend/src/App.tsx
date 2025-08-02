@@ -103,6 +103,7 @@ import ProfessorDashboard from './pages/ProfessorDashboard'
 import SecretaryDashboard from './pages/SecretaryDashboard'
 import LeaderDashboard from './pages/LeaderDashboard'
 import ProfessorAvailability from './pages/ProfessorAvailability'
+import GradingAssistantWorkspace from './pages/GradingAssistantWorkspace'
 
 // Demo Pages
 import DesignSystemDemo from './pages/DesignSystemDemo'
@@ -137,6 +138,9 @@ function App() {
         
         {/* Professor Availability */}
         <Route path="/professor-availability" element={<ProfessorAvailability />} />
+        
+        {/* Grading Assistant Workspace */}
+        <Route path="/grading-assistant-workspace" element={<GradingAssistantWorkspace />} />
 
         {/* Lab Rotation Course (实验室轮转课程) */}
         {/* Stage 1: 前期筹备阶段 */}
