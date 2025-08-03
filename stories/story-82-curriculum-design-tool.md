@@ -1,5 +1,5 @@
 ---
-status: pending
+status: completed
 priority: high
 complexity: medium
 dependencies: ["模板系统"]
@@ -28,10 +28,10 @@ ui_reference: research-platform-ui-design.md lines 3731-3815
 - 并排比较视图，显示学分统计和要求符合性检查
 
 ## 验收标准
-- [ ] 基于模板配置培养方案
-- [ ] 支持方案对比和优化
-- [ ] 生成可视化课程地图
-- [ ] 导出标准文档
+- [x] 基于模板配置培养方案
+- [x] 支持方案对比和优化
+- [x] 生成可视化课程地图
+- [x] 导出标准文档
 
 ## UI设计参考
 参考课程设计可视化工具（research-platform-ui-design.md lines 3731-3815），包含模板库面板、可视化课程地图设计器、课程组件库、并排比较视图等核心组件。界面采用拖拽式设计，支持直观的课程规划和学期安排。

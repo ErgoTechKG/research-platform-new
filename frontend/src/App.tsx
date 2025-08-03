@@ -94,6 +94,7 @@ import AIHomeworkDetection from './pages/AIHomeworkDetection'
 import AIScoringAssistant from './pages/AIScoringAssistant'
 import AutomatedDataCollection from './pages/AutomatedDataCollection'
 import DataCollectionAutomation from './pages/DataCollectionAutomation'
+import CurriculumDesignTool from './pages/CurriculumDesignTool'
 import LLMReportGeneration from './pages/LLMReportGeneration'
 import RealtimeDataDashboard from './pages/RealtimeDataDashboard'
 import PredictiveAnalytics from './pages/PredictiveAnalytics'
@@ -235,6 +236,7 @@ function App() {
         <Route path="/data/data-analysis-center" element={<DataAnalysisCenter />} />
         <Route path="/data/automated-data-collection" element={<AutomatedDataCollection />} />
         <Route path="/data/data-collection-automation" element={<DataCollectionAutomation />} />
+        <Route path="/tools/curriculum-design-tool" element={<CurriculumDesignTool />} />
         <Route path="/data/llm-report-generation" element={<LLMReportGeneration />} />
         <Route path="/data/realtime-data-dashboard" element={<RealtimeDataDashboard />} />
         <Route path="/data/predictive-analytics" element={<PredictiveAnalytics />} />
@@ -305,6 +307,7 @@ function App() {
         <Route path="/ai-scoring-assistant" element={<AIScoringAssistant />} />
         <Route path="/automated-data-collection" element={<AutomatedDataCollection />} />
         <Route path="/data-collection-automation" element={<DataCollectionAutomation />} />
+        <Route path="/curriculum-design-tool" element={<CurriculumDesignTool />} />
         <Route path="/llm-report-generation" element={<LLMReportGeneration />} />
         <Route path="/realtime-data-dashboard" element={<RealtimeDataDashboard />} />
         <Route path="/predictive-analytics" element={<PredictiveAnalytics />} />
