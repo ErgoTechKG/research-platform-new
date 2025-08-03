@@ -106,6 +106,10 @@ import ProfessorApplicationFilter from './pages/ProfessorApplicationFilter'
 import ProfessorInterviewScheduler from './pages/ProfessorInterviewScheduler'
 import SecretaryMatchingMonitor from './pages/SecretaryMatchingMonitor'
 import SecretaryAutoAdjustment from './pages/SecretaryAutoAdjustment'
+import SecretaryMaterialReview from './pages/SecretaryMaterialReview'
+import SecretaryScoringConsistency from './pages/SecretaryScoringConsistency'
+import RealtimeDocumentEditing from './pages/RealtimeDocumentEditing'
+import CommentAnnotationSystem from './pages/CommentAnnotationSystem'
 import StudentMaterialWizard from './pages/StudentMaterialWizard'
 import StudentScoreTracker from './pages/StudentScoreTracker'
 
@@ -258,6 +262,10 @@ function App() {
         <Route path="/lab-rotation/professor-interview-scheduler" element={<ProfessorInterviewScheduler />} />
         <Route path="/lab-rotation/secretary-matching-monitor" element={<SecretaryMatchingMonitor />} />
         <Route path="/lab-rotation/secretary-auto-adjustment" element={<SecretaryAutoAdjustment />} />
+        <Route path="/quality-assessment/secretary-material-review" element={<SecretaryMaterialReview />} />
+        <Route path="/quality-assessment/secretary-scoring-consistency" element={<SecretaryScoringConsistency />} />
+        <Route path="/collaboration/realtime-document-editing" element={<RealtimeDocumentEditing />} />
+        <Route path="/collaboration/comment-annotation-system" element={<CommentAnnotationSystem />} />
         <Route path="/quality-assessment/student-material-wizard" element={<StudentMaterialWizard />} />
         <Route path="/quality-assessment/student-score-tracker" element={<StudentScoreTracker />} />
         <Route path="/social/social-learning-network" element={<SocialLearningNetwork />} />
@@ -339,6 +347,10 @@ function App() {
         <Route path="/professor-interview-scheduler" element={<ProfessorInterviewScheduler />} />
         <Route path="/secretary-matching-monitor" element={<SecretaryMatchingMonitor />} />
         <Route path="/secretary-auto-adjustment" element={<SecretaryAutoAdjustment />} />
+        <Route path="/secretary-material-review" element={<SecretaryMaterialReview />} />
+        <Route path="/secretary-scoring-consistency" element={<SecretaryScoringConsistency />} />
+        <Route path="/realtime-document-editing" element={<RealtimeDocumentEditing />} />
+        <Route path="/comment-annotation-system" element={<CommentAnnotationSystem />} />
         <Route path="/student-material-wizard" element={<StudentMaterialWizard />} />
         <Route path="/student-score-tracker" element={<StudentScoreTracker />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
