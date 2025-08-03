@@ -1,5 +1,5 @@
 ---
-status: pending
+status: finished
 priority: medium
 complexity: medium
 dependencies: []
