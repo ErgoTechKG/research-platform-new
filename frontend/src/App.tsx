@@ -99,6 +99,11 @@ import WorkflowDesigner from './pages/WorkflowDesigner'
 import LLMReportGeneration from './pages/LLMReportGeneration'
 import RealtimeDataDashboard from './pages/RealtimeDataDashboard'
 import PredictiveAnalytics from './pages/PredictiveAnalytics'
+import AnnualReportGenerator from './pages/AnnualReportGenerator'
+import StudentMentorComparison from './pages/StudentMentorComparison'
+import StudentRecommendationDashboard from './pages/StudentRecommendationDashboard'
+import ProfessorApplicationFilter from './pages/ProfessorApplicationFilter'
+import ProfessorInterviewScheduler from './pages/ProfessorInterviewScheduler'
 
 // Role-based Dashboards
 import StudentDashboard from './pages/StudentDashboard'
@@ -242,6 +247,11 @@ function App() {
         <Route path="/data/llm-report-generation" element={<LLMReportGeneration />} />
         <Route path="/data/realtime-data-dashboard" element={<RealtimeDataDashboard />} />
         <Route path="/data/predictive-analytics" element={<PredictiveAnalytics />} />
+        <Route path="/reports/annual-report-generator" element={<AnnualReportGenerator />} />
+        <Route path="/lab-rotation/student-mentor-comparison" element={<StudentMentorComparison />} />
+        <Route path="/lab-rotation/student-recommendation-dashboard" element={<StudentRecommendationDashboard />} />
+        <Route path="/lab-rotation/professor-application-filter" element={<ProfessorApplicationFilter />} />
+        <Route path="/lab-rotation/professor-interview-scheduler" element={<ProfessorInterviewScheduler />} />
         <Route path="/social/social-learning-network" element={<SocialLearningNetwork />} />
         <Route path="/resources/resource-sharing-center" element={<ResourceSharingCenter />} />
 
@@ -314,6 +324,11 @@ function App() {
         <Route path="/llm-report-generation" element={<LLMReportGeneration />} />
         <Route path="/realtime-data-dashboard" element={<RealtimeDataDashboard />} />
         <Route path="/predictive-analytics" element={<PredictiveAnalytics />} />
+        <Route path="/annual-report-generator" element={<AnnualReportGenerator />} />
+        <Route path="/student-mentor-comparison" element={<StudentMentorComparison />} />
+        <Route path="/student-recommendation-dashboard" element={<StudentRecommendationDashboard />} />
+        <Route path="/professor-application-filter" element={<ProfessorApplicationFilter />} />
+        <Route path="/professor-interview-scheduler" element={<ProfessorInterviewScheduler />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/professor-dashboard" element={<ProfessorDashboard />} />
         <Route path="/secretary-dashboard" element={<SecretaryDashboard />} />
