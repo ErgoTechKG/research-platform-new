@@ -104,6 +104,7 @@ import StudentMentorComparison from './pages/StudentMentorComparison'
 import StudentRecommendationDashboard from './pages/StudentRecommendationDashboard'
 import ProfessorApplicationFilter from './pages/ProfessorApplicationFilter'
 import ProfessorInterviewScheduler from './pages/ProfessorInterviewScheduler'
+import SecretaryMatchingMonitor from './pages/SecretaryMatchingMonitor'
 
 // Role-based Dashboards
 import StudentDashboard from './pages/StudentDashboard'
@@ -252,6 +253,7 @@ function App() {
         <Route path="/lab-rotation/student-recommendation-dashboard" element={<StudentRecommendationDashboard />} />
         <Route path="/lab-rotation/professor-application-filter" element={<ProfessorApplicationFilter />} />
         <Route path="/lab-rotation/professor-interview-scheduler" element={<ProfessorInterviewScheduler />} />
+        <Route path="/lab-rotation/secretary-matching-monitor" element={<SecretaryMatchingMonitor />} />
         <Route path="/social/social-learning-network" element={<SocialLearningNetwork />} />
         <Route path="/resources/resource-sharing-center" element={<ResourceSharingCenter />} />
 
@@ -329,6 +331,7 @@ function App() {
         <Route path="/student-recommendation-dashboard" element={<StudentRecommendationDashboard />} />
         <Route path="/professor-application-filter" element={<ProfessorApplicationFilter />} />
         <Route path="/professor-interview-scheduler" element={<ProfessorInterviewScheduler />} />
+        <Route path="/secretary-matching-monitor" element={<SecretaryMatchingMonitor />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/professor-dashboard" element={<ProfessorDashboard />} />
         <Route path="/secretary-dashboard" element={<SecretaryDashboard />} />
