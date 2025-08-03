@@ -1,5 +1,5 @@
 ---
-status: pending
+status: completed
 priority: high
 complexity: high
 dependencies: ["流程引擎"]
@@ -28,10 +28,10 @@ ui_reference: research-platform-ui-design.md lines 3820-3930
 - 版本管理系统，支持流程版本控制和回滚
 
 ## 验收标准
-- [ ] 拖拽式流程设计界面
-- [ ] 支持条件分支和并行处理
-- [ ] 实时流程监控
-- [ ] 异常处理机制
+- [x] 拖拽式流程设计界面
+- [x] 支持条件分支和并行处理
+- [x] 实时流程监控
+- [x] 异常处理机制
 
 ## UI设计参考
 参考拖拽式工作流设计器（research-platform-ui-design.md lines 3820-3930），包含工作流组件库、可视化画布、节点配置面板、实时监控面板等核心组件。界面采用节点式设计，支持直观的流程构建和条件配置。

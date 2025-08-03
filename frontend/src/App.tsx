@@ -95,6 +95,7 @@ import AIScoringAssistant from './pages/AIScoringAssistant'
 import AutomatedDataCollection from './pages/AutomatedDataCollection'
 import DataCollectionAutomation from './pages/DataCollectionAutomation'
 import CurriculumDesignTool from './pages/CurriculumDesignTool'
+import WorkflowDesigner from './pages/WorkflowDesigner'
 import LLMReportGeneration from './pages/LLMReportGeneration'
 import RealtimeDataDashboard from './pages/RealtimeDataDashboard'
 import PredictiveAnalytics from './pages/PredictiveAnalytics'
@@ -237,6 +238,7 @@ function App() {
         <Route path="/data/automated-data-collection" element={<AutomatedDataCollection />} />
         <Route path="/data/data-collection-automation" element={<DataCollectionAutomation />} />
         <Route path="/tools/curriculum-design-tool" element={<CurriculumDesignTool />} />
+        <Route path="/tools/workflow-designer" element={<WorkflowDesigner />} />
         <Route path="/data/llm-report-generation" element={<LLMReportGeneration />} />
         <Route path="/data/realtime-data-dashboard" element={<RealtimeDataDashboard />} />
         <Route path="/data/predictive-analytics" element={<PredictiveAnalytics />} />
@@ -308,6 +310,7 @@ function App() {
         <Route path="/automated-data-collection" element={<AutomatedDataCollection />} />
         <Route path="/data-collection-automation" element={<DataCollectionAutomation />} />
         <Route path="/curriculum-design-tool" element={<CurriculumDesignTool />} />
+        <Route path="/workflow-designer" element={<WorkflowDesigner />} />
         <Route path="/llm-report-generation" element={<LLMReportGeneration />} />
         <Route path="/realtime-data-dashboard" element={<RealtimeDataDashboard />} />
         <Route path="/predictive-analytics" element={<PredictiveAnalytics />} />
