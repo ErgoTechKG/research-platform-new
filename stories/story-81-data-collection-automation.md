@@ -1,5 +1,5 @@
 ---
-status: pending
+status: completed
 priority: high
 complexity: high
 dependencies: ["数据集成API"]
@@ -28,10 +28,10 @@ ui_reference: research-platform-ui-design.md lines 3651-3730
 - 智能调度系统，根据数据源特点自动安排采集时间
 
 ## 验收标准
-- [ ] 支持多数据源配置
-- [ ] 自动数据清洗和验证
-- [ ] 实时监控数据质量
-- [ ] 异常数据预警
+- [x] 支持多数据源配置
+- [x] 自动数据清洗和验证
+- [x] 实时监控数据质量
+- [x] 异常数据预警
 
 ## UI设计参考
 参考自动化数据收集控制中心（research-platform-ui-design.md lines 3651-3730），包含数据源配置面板、实时监控仪表板、数据质量评估、活动日志和快速操作面板等核心组件。界面采用分区布局，提供全面的数据采集状态监控和管理功能。

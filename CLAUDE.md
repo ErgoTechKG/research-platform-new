@@ -14,3 +14,7 @@
 ## Project Structure
 
 - The frontend code is at frontend folder, follow old style and pattern
+
+## Development Principles
+
+- Remember this is role-based platform, always make sure which role you are designing
