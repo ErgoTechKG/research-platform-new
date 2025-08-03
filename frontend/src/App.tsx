@@ -104,6 +104,7 @@ import SecretaryDashboard from './pages/SecretaryDashboard'
 import LeaderDashboard from './pages/LeaderDashboard'
 import ProfessorAvailability from './pages/ProfessorAvailability'
 import GradingAssistantWorkspace from './pages/GradingAssistantWorkspace'
+import StudentProfile from './pages/StudentProfile'
 
 // Demo Pages
 import DesignSystemDemo from './pages/DesignSystemDemo'
@@ -141,6 +142,10 @@ function App() {
         
         {/* Grading Assistant Workspace */}
         <Route path="/grading-assistant-workspace" element={<GradingAssistantWorkspace />} />
+        
+        {/* Student Profile System */}
+        <Route path="/student-profile" element={<StudentProfile />} />
+        <Route path="/student-profile/:studentId" element={<StudentProfile />} />
 
         {/* Lab Rotation Course (实验室轮转课程) */}
         {/* Stage 1: 前期筹备阶段 */}
