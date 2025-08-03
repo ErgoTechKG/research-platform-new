@@ -91,10 +91,11 @@ interface RiskAssessment {
 
 export default function PredictiveAnalytics() {
   const [selectedModel, setSelectedModel] = useState('model_1')
-  const [selectedTimeframe, setSelectedTimeframe] = useState('semester')
+  const [selectedTimeframe, setSelectedTimeframe] = useState('short')
+  const [selectedAnalysisType, setSelectedAnalysisType] = useState('trend-prediction')
   const [isTraining, setIsTraining] = useState(false)
   const [lastUpdate, setLastUpdate] = useState(new Date())
-  const [selectedTab, setSelectedTab] = useState('student-performance')
+  const [selectedTab, setSelectedTab] = useState('core-trends')
 
   // Mock prediction models
   const predictionModels: PredictionModel[] = [
@@ -338,39 +339,45 @@ export default function PredictiveAnalytics() {
           {/* Page Header */}
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">学生表现预测分析</h1>
+              <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-2">
+                <Brain className="w-8 h-8 text-blue-600" />
+                预测分析指挥中心
+              </h1>
               <p className="text-gray-600 mt-1">
-                基于机器学习的智能预测分析系统，提供学生表现预测、资源需求分析和风险评估
+                为领导角色提供高级预测分析工具，支持多时间维度趋势预测、情景分析和决策推荐系统
               </p>
             </div>
             
             <div className="flex items-center gap-4">
-              {/* Model Selector */}
-              <Select value={selectedModel} onValueChange={setSelectedModel}>
-                <SelectTrigger className="w-48">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {predictionModels.map(model => (
-                    <SelectItem key={model.id} value={model.id}>
-                      {model.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              {/* Time Range Selector */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium">时间范围:</span>
+                <Select value={selectedTimeframe} onValueChange={setSelectedTimeframe}>
+                  <SelectTrigger className="w-32">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="short">短期</SelectItem>
+                    <SelectItem value="medium">中期</SelectItem>
+                    <SelectItem value="long">长期</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
 
-              {/* Timeframe Selector */}
-              <Select value={selectedTimeframe} onValueChange={setSelectedTimeframe}>
-                <SelectTrigger className="w-32">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="week">本周</SelectItem>
-                  <SelectItem value="month">本月</SelectItem>
-                  <SelectItem value="semester">本学期</SelectItem>
-                  <SelectItem value="year">本年度</SelectItem>
-                </SelectContent>
-              </Select>
+              {/* Analysis Type Selector */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium">分析类型:</span>
+                <Select value={selectedAnalysisType} onValueChange={setSelectedAnalysisType}>
+                  <SelectTrigger className="w-40">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="trend-prediction">趋势预测</SelectItem>
+                    <SelectItem value="scenario-analysis">情景分析</SelectItem>
+                    <SelectItem value="decision-recommend">决策推荐</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
 
               {/* Retrain Button */}
               <Button
@@ -428,14 +435,14 @@ export default function PredictiveAnalytics() {
           {/* Main Content Tabs */}
           <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
             <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="student-performance">学生表现预测</TabsTrigger>
-              <TabsTrigger value="resource-demand">资源需求预测</TabsTrigger>
-              <TabsTrigger value="risk-assessment">风险评估</TabsTrigger>
-              <TabsTrigger value="model-management">模型管理</TabsTrigger>
+              <TabsTrigger value="core-trends">核心趋势预测</TabsTrigger>
+              <TabsTrigger value="scenario-analysis">What-If情景分析</TabsTrigger>
+              <TabsTrigger value="smart-recommendations">智能决策推荐</TabsTrigger>
+              <TabsTrigger value="kpi-monitoring">关键指标监控</TabsTrigger>
             </TabsList>
 
-            {/* Student Performance Prediction */}
-            <TabsContent value="student-performance" className="space-y-6 mt-6">
+            {/* Core Trends Prediction */}
+            <TabsContent value="core-trends" className="space-y-6 mt-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Performance Trend Chart */}
                 <Card>
@@ -554,8 +561,348 @@ export default function PredictiveAnalytics() {
               </Card>
             </TabsContent>
 
-            {/* Resource Demand Prediction */}
-            <TabsContent value="resource-demand" className="space-y-6 mt-6">
+            {/* What-If Scenario Analysis */}
+            <TabsContent value="scenario-analysis" className="space-y-6 mt-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Target className="w-5 h-5" />
+                    What-If 情景分析
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    {/* Scenario Configuration */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                      <Card>
+                        <CardHeader className="pb-3">
+                          <CardTitle className="text-sm">资源投入调整</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">预算增加:</span>
+                            <Select defaultValue="15">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="10">+10%</SelectItem>
+                                <SelectItem value="15">+15%</SelectItem>
+                                <SelectItem value="20">+20%</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">人员增加:</span>
+                            <Select defaultValue="3">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="2">+2人</SelectItem>
+                                <SelectItem value="3">+3人</SelectItem>
+                                <SelectItem value="5">+5人</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">设备升级:</span>
+                            <input type="checkbox" defaultChecked className="rounded" />
+                          </div>
+                        </CardContent>
+                      </Card>
+
+                      <Card>
+                        <CardHeader className="pb-3">
+                          <CardTitle className="text-sm">政策变化影响</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">新政策权重:</span>
+                            <Select defaultValue="0.3">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="0.2">0.2</SelectItem>
+                                <SelectItem value="0.3">0.3</SelectItem>
+                                <SelectItem value="0.5">0.5</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">合规要求:</span>
+                            <Select defaultValue="improved">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="stable">稳定</SelectItem>
+                                <SelectItem value="improved">提升</SelectItem>
+                                <SelectItem value="strict">严格</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">资助政策:</span>
+                            <Select defaultValue="stable">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="stable">稳定</SelectItem>
+                                <SelectItem value="increase">增加</SelectItem>
+                                <SelectItem value="decrease">减少</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                        </CardContent>
+                      </Card>
+
+                      <Card>
+                        <CardHeader className="pb-3">
+                          <CardTitle className="text-sm">市场环境变化</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">竞争压力:</span>
+                            <Select defaultValue="medium">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="low">低</SelectItem>
+                                <SelectItem value="medium">中等</SelectItem>
+                                <SelectItem value="high">高</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">技术趋势:</span>
+                            <Select defaultValue="ai">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="ai">AI驱动</SelectItem>
+                                <SelectItem value="cloud">云计算</SelectItem>
+                                <SelectItem value="mobile">移动化</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">用户需求:</span>
+                            <Select defaultValue="personalized">
+                              <SelectTrigger className="w-20">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="standard">标准化</SelectItem>
+                                <SelectItem value="personalized">个性化</SelectItem>
+                                <SelectItem value="automated">自动化</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+
+                    {/* Analysis Results */}
+                    <div className="flex justify-center gap-4 my-6">
+                      <Button className="flex items-center gap-2">
+                        <Target className="w-4 h-4" />
+                        运行分析
+                      </Button>
+                      <Button variant="outline" className="flex items-center gap-2">
+                        <RefreshCw className="w-4 h-4" />
+                        重置参数
+                      </Button>
+                    </div>
+
+                    {/* Comparison Results Table */}
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">预测结果对比</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="overflow-x-auto">
+                          <table className="w-full">
+                            <thead>
+                              <tr className="border-b">
+                                <th className="text-left py-3 px-4">指标</th>
+                                <th className="text-center py-3 px-4">当前预测</th>
+                                <th className="text-center py-3 px-4">情景A预测</th>
+                                <th className="text-center py-3 px-4">情景B预测</th>
+                                <th className="text-center py-3 px-4">最优情景</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr className="border-b">
+                                <td className="py-3 px-4">项目完成率</td>
+                                <td className="text-center py-3 px-4">85%</td>
+                                <td className="text-center py-3 px-4 text-green-600 font-medium">92%</td>
+                                <td className="text-center py-3 px-4">88%</td>
+                                <td className="text-center py-3 px-4 text-blue-600 font-medium">95% (情景C)</td>
+                              </tr>
+                              <tr className="border-b">
+                                <td className="py-3 px-4">预算利用率</td>
+                                <td className="text-center py-3 px-4">89%</td>
+                                <td className="text-center py-3 px-4">78%</td>
+                                <td className="text-center py-3 px-4 text-green-600 font-medium">95%</td>
+                                <td className="text-center py-3 px-4 text-blue-600 font-medium">91% (情景A)</td>
+                              </tr>
+                              <tr className="border-b">
+                                <td className="py-3 px-4">团队效率</td>
+                                <td className="text-center py-3 px-4">96%</td>
+                                <td className="text-center py-3 px-4 text-green-600 font-medium">98%</td>
+                                <td className="text-center py-3 px-4">94%</td>
+                                <td className="text-center py-3 px-4 text-blue-600 font-medium">99% (情景A)</td>
+                              </tr>
+                              <tr className="border-b">
+                                <td className="py-3 px-4">风险等级</td>
+                                <td className="text-center py-3 px-4">中等</td>
+                                <td className="text-center py-3 px-4 text-green-600 font-medium">低</td>
+                                <td className="text-center py-3 px-4">中</td>
+                                <td className="text-center py-3 px-4 text-blue-600 font-medium">低 (情景A)</td>
+                              </tr>
+                              <tr className="border-b">
+                                <td className="py-3 px-4">ROI预期</td>
+                                <td className="text-center py-3 px-4">2.3x</td>
+                                <td className="text-center py-3 px-4 text-green-600 font-medium">2.8x</td>
+                                <td className="text-center py-3 px-4">2.5x</td>
+                                <td className="text-center py-3 px-4 text-blue-600 font-medium">3.1x (情景C)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* Smart Recommendations */}
+            <TabsContent value="smart-recommendations" className="space-y-6 mt-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5" />
+                    智能决策推荐
+                  </CardTitle>
+                  <div className="flex items-center gap-2 mt-2">
+                    <span className="text-sm text-gray-600">信心指数:</span>
+                    <Badge variant="default" className="bg-green-500">87%</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {/* High Priority Recommendations */}
+                  <div>
+                    <h4 className="font-medium text-lg mb-4 flex items-center gap-2">
+                      <Target className="w-5 h-5 text-red-500" />
+                      高优先级建议
+                    </h4>
+                    <div className="space-y-4">
+                      <Alert className="border-green-200 bg-green-50">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <div>
+                          <h5 className="font-medium">1. 立即实施预算重分配策略</h5>
+                          <AlertDescription className="mt-1">
+                            预期收益: +12% 效率提升
+                          </AlertDescription>
+                          <div className="mt-2 text-sm text-gray-600">
+                            └─ 建议增加AI工具投入，减少手工流程依赖
+                          </div>
+                        </div>
+                      </Alert>
+                      
+                      <Alert className="border-blue-200 bg-blue-50">
+                        <Users className="h-4 w-4 text-blue-600" />
+                        <div>
+                          <h5 className="font-medium">2. 启动团队技能提升计划</h5>
+                          <AlertDescription className="mt-1">
+                            预期收益: +8% 产出质量
+                          </AlertDescription>
+                          <div className="mt-2 text-sm text-gray-600">
+                            └─ 重点培训数据分析和自动化工具使用
+                          </div>
+                        </div>
+                      </Alert>
+                    </div>
+                  </div>
+
+                  {/* Risk Warnings */}
+                  <div>
+                    <h4 className="font-medium text-lg mb-4 flex items-center gap-2">
+                      <AlertTriangle className="w-5 h-5 text-yellow-500" />
+                      中等风险提示
+                    </h4>
+                    <div className="space-y-3">
+                      <div className="p-4 border border-yellow-200 bg-yellow-50 rounded-lg">
+                        <div className="flex items-start gap-2">
+                          <span className="text-yellow-600">•</span>
+                          <div className="text-sm">
+                            <span className="font-medium">当前数据质量趋势需要关注</span>
+                            <div className="text-gray-600 mt-1">建议加强质控流程</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4 border border-yellow-200 bg-yellow-50 rounded-lg">
+                        <div className="flex items-start gap-2">
+                          <span className="text-yellow-600">•</span>
+                          <div className="text-sm">
+                            <span className="font-medium">用户满意度指标偏低</span>
+                            <div className="text-gray-600 mt-1">建议调研具体痛点</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Historical Case Matching */}
+                  <div>
+                    <h4 className="font-medium text-lg mb-4 flex items-center gap-2">
+                      <FileText className="w-5 h-5 text-gray-600" />
+                      历史案例匹配
+                    </h4>
+                    <div className="p-4 border border-gray-200 bg-gray-50 rounded-lg">
+                      <div className="text-sm">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge variant="outline">85%相似</Badge>
+                          <span className="font-medium">与2023年Q2情况相似</span>
+                        </div>
+                        <div className="text-gray-600">
+                          当时采用渐进式改进策略，成功率达到92%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-3 pt-4 border-t">
+                    <Button className="flex items-center gap-2">
+                      <FileText className="w-4 h-4" />
+                      生成详细报告
+                    </Button>
+                    <Button variant="outline" className="flex items-center gap-2">
+                      <Users className="w-4 h-4" />
+                      发送给团队
+                    </Button>
+                    <Button variant="outline" className="flex items-center gap-2">
+                      <Calendar className="w-4 w-4" />
+                      设置提醒
+                    </Button>
+                    <Button variant="outline" className="flex items-center gap-2">
+                      <Download className="w-4 h-4" />
+                      保存策略
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* KPI Monitoring */}
+            <TabsContent value="kpi-monitoring" className="space-y-6 mt-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Resource Demand Chart */}
                 <Card>

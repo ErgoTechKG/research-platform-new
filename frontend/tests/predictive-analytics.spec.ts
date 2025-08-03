@@ -8,15 +8,17 @@ test.describe('Predictive Analytics', () => {
 
   test('should display main predictive analytics interface', async ({ page }) => {
     // Check page title
-    await expect(page.locator('h1')).toContainText('学生表现预测分析')
+    await expect(page.locator('h1')).toContainText('预测分析指挥中心')
     
     // Check subtitle
-    await expect(page.locator('text=基于机器学习的智能预测分析系统')).toBeVisible()
+    await expect(page.locator('text=为领导角色提供高级预测分析工具')).toBeVisible()
 
-    // Check model selector
+    // Check time range selector
+    await expect(page.locator('text=时间范围:')).toBeVisible()
     await expect(page.locator('[role="combobox"]').first()).toBeVisible()
     
-    // Check timeframe selector
+    // Check analysis type selector
+    await expect(page.locator('text=分析类型:')).toBeVisible()
     await expect(page.locator('[role="combobox"]').nth(1)).toBeVisible()
 
     // Check retrain button
@@ -44,10 +46,10 @@ test.describe('Predictive Analytics', () => {
 
   test('should navigate between different analysis tabs', async ({ page }) => {
     // Check main tabs
-    await expect(page.getByRole('tab', { name: '学生表现预测' })).toBeVisible()
-    await expect(page.getByRole('tab', { name: '资源需求预测' })).toBeVisible()
-    await expect(page.getByRole('tab', { name: '风险评估' })).toBeVisible()
-    await expect(page.getByRole('tab', { name: '模型管理' })).toBeVisible()
+    await expect(page.getByRole('tab', { name: '核心趋势预测' })).toBeVisible()
+    await expect(page.getByRole('tab', { name: 'What-If情景分析' })).toBeVisible()
+    await expect(page.getByRole('tab', { name: '智能决策推荐' })).toBeVisible()
+    await expect(page.getByRole('tab', { name: '关键指标监控' })).toBeVisible()
 
     // Test student performance prediction tab (default)
     await expect(page.locator('text=成绩趋势预测')).toBeVisible()
@@ -219,5 +221,168 @@ test.describe('Predictive Analytics', () => {
     // Test desktop viewport
     await page.setViewportSize({ width: 1920, height: 1080 })
     await expect(page.locator('text=风险分布')).toBeVisible()
+  })
+
+  test('should display What-If scenario analysis features', async ({ page }) => {
+    // Navigate to scenario analysis tab
+    await page.click('text=What-If情景分析')
+    
+    // Check scenario configuration panels
+    await expect(page.locator('text=资源投入调整')).toBeVisible()
+    await expect(page.locator('text=政策变化影响')).toBeVisible()
+    await expect(page.locator('text=市场环境变化')).toBeVisible()
+    
+    // Check configuration options
+    await expect(page.locator('text=预算增加:')).toBeVisible()
+    await expect(page.locator('text=人员增加:')).toBeVisible()
+    await expect(page.locator('text=设备升级:')).toBeVisible()
+    
+    // Check action buttons
+    await expect(page.locator('button:has-text("运行分析")')).toBeVisible()
+    await expect(page.locator('button:has-text("重置参数")')).toBeVisible()
+    
+    // Check results comparison table
+    await expect(page.locator('text=预测结果对比')).toBeVisible()
+    await expect(page.locator('text=项目完成率')).toBeVisible()
+    await expect(page.locator('text=预算利用率')).toBeVisible()
+    await expect(page.locator('text=团队效率')).toBeVisible()
+    await expect(page.locator('text=风险等级')).toBeVisible()
+    await expect(page.locator('text=ROI预期')).toBeVisible()
+  })
+
+  test('should display smart recommendations features', async ({ page }) => {
+    // Navigate to smart recommendations tab
+    await page.click('text=智能决策推荐')
+    
+    // Check confidence indicator
+    await expect(page.locator('text=信心指数:')).toBeVisible()
+    await expect(page.locator('text=87%')).toBeVisible()
+    
+    // Check high priority recommendations
+    await expect(page.locator('text=高优先级建议')).toBeVisible()
+    await expect(page.locator('text=立即实施预算重分配策略')).toBeVisible()
+    await expect(page.locator('text=启动团队技能提升计划')).toBeVisible()
+    
+    // Check risk warnings
+    await expect(page.locator('text=中等风险提示')).toBeVisible()
+    await expect(page.locator('text=当前数据质量趋势需要关注')).toBeVisible()
+    await expect(page.locator('text=用户满意度指标偏低')).toBeVisible()
+    
+    // Check historical case matching
+    await expect(page.locator('text=历史案例匹配')).toBeVisible()
+    await expect(page.locator('text=85%相似')).toBeVisible()
+    await expect(page.locator('text=与2023年Q2情况相似')).toBeVisible()
+    
+    // Check action buttons
+    await expect(page.locator('button:has-text("生成详细报告")')).toBeVisible()
+    await expect(page.locator('button:has-text("发送给团队")')).toBeVisible()
+    await expect(page.locator('button:has-text("设置提醒")')).toBeVisible()
+    await expect(page.locator('button:has-text("保存策略")')).toBeVisible()
+  })
+
+  test('should handle time range and analysis type selectors', async ({ page }) => {
+    // Test time range selector
+    await page.click('text=时间范围:')
+    await page.locator('[role="combobox"]').first().click()
+    await expect(page.locator('text=短期')).toBeVisible()
+    await expect(page.locator('text=中期')).toBeVisible()
+    await expect(page.locator('text=长期')).toBeVisible()
+    
+    // Select medium term
+    await page.click('text=中期')
+    
+    // Test analysis type selector
+    await page.locator('[role="combobox"]').nth(1).click()
+    await expect(page.locator('text=趋势预测')).toBeVisible()
+    await expect(page.locator('text=情景分析')).toBeVisible()
+    await expect(page.locator('text=决策推荐')).toBeVisible()
+  })
+
+  test('should handle scenario analysis interactions', async ({ page }) => {
+    // Navigate to scenario analysis
+    await page.click('text=What-If情景分析')
+    
+    // Test budget increase selector
+    await page.locator('text=预算增加:').locator('..').locator('[role="combobox"]').click()
+    await page.click('text=+20%')
+    
+    // Test staff increase selector
+    await page.locator('text=人员增加:').locator('..').locator('[role="combobox"]').click()
+    await page.click('text=+5人')
+    
+    // Test equipment upgrade checkbox
+    const equipmentCheckbox = page.locator('text=设备升级:').locator('..').locator('input[type="checkbox"]')
+    await equipmentCheckbox.click()
+    
+    // Test run analysis button
+    await page.click('button:has-text("运行分析")')
+    
+    // Test reset parameters button
+    await page.click('button:has-text("重置参数")')
+  })
+
+  test('should display multi-dimensional KPI monitoring', async ({ page }) => {
+    // Navigate to KPI monitoring tab
+    await page.click('text=关键指标监控')
+    
+    // Should show KPI monitoring content (inherited from original design)
+    await expect(page.locator('text=资源需求趋势').or(page.locator('text=资源状态监控'))).toBeVisible()
+  })
+
+  test('should handle recommendation actions', async ({ page }) => {
+    // Navigate to recommendations
+    await page.click('text=智能决策推荐')
+    
+    // Test recommendation action buttons
+    await page.click('button:has-text("生成详细报告")')
+    await page.click('button:has-text("发送给团队")')
+    await page.click('button:has-text("设置提醒")')
+    await page.click('button:has-text("保存策略")')
+  })
+
+  test('should display proper icons and visual elements', async ({ page }) => {
+    // Check for brain icon in header
+    await expect(page.locator('h1 svg')).toBeVisible()
+    
+    // Navigate through tabs and check for icons
+    await page.click('text=What-If情景分析')
+    await expect(page.locator('text=What-If 情景分析').locator('..').locator('svg')).toBeVisible()
+    
+    await page.click('text=智能决策推荐')
+    await expect(page.locator('text=智能决策推荐').locator('..').locator('svg')).toBeVisible()
+    
+    // Check for various status and action icons
+    await expect(page.locator('svg')).toHaveCount({ min: 5 })
+  })
+
+  test('should be accessible for keyboard navigation', async ({ page }) => {
+    // Tab through major elements
+    await page.keyboard.press('Tab')
+    await page.keyboard.press('Tab')
+    await page.keyboard.press('Tab')
+    
+    // Should be able to navigate to main tabs with keyboard
+    await page.keyboard.press('ArrowRight')
+    await page.keyboard.press('ArrowLeft')
+    
+    // Enter should activate focused elements
+    await page.keyboard.press('Enter')
+  })
+
+  test('should handle responsive design for new features', async ({ page }) => {
+    // Test mobile viewport with new features
+    await page.setViewportSize({ width: 375, height: 667 })
+    
+    // Navigate to scenario analysis on mobile
+    await page.click('text=What-If情景分析')
+    await expect(page.locator('text=资源投入调整')).toBeVisible()
+    
+    // Navigate to recommendations on mobile
+    await page.click('text=智能决策推荐')
+    await expect(page.locator('text=高优先级建议')).toBeVisible()
+    
+    // Test tablet viewport
+    await page.setViewportSize({ width: 768, height: 1024 })
+    await expect(page.locator('text=预测结果对比')).toBeVisible()
   })
 })
